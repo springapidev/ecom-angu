@@ -1,0 +1,124 @@
+
+  <!--[if lt IE 8]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- top banner area start -->
+  <app-public-annonement></app-public-annonement>
+  <!-- top banner area end -->
+  
+  <!-- header start -->
+  <app-public-header></app-public-header>
+  <!-- header end -->
+  
+  <!-- scroll item menu start -->
+  <div class="scroll-item">
+      <nav class="collapse navbar-collapse">
+          <ul>
+              <li><a href="#electronics" class="smooth"><img src="/assets/img\icon\icon_electronics.jpg" alt=""></a></li>
+              <li><a href="#fashion" class="smooth"><img src="/assets/img\icon\icon_fashion.jpg" alt=""></a></li>
+              <li><a href="#furniture" class="smooth"><img src="/assets/img\icon\icon_Furniture.jpg" alt=""></a></li>
+              <li><a href="#accessories" class="smooth"><img src="/assets/img\icon\icon_sunglass.jpg" alt=""></a></li>
+              <li id="scrollUp"> <a href="#"><i class="fa fa-angle-double-up"></i><span>back to top</span></a></li>
+          </ul>
+      </nav>
+  </div>
+  <!-- scroll item menu end -->
+  
+  <!-- Page will Inject Here Start -->
+<router-outlet></router-outlet>
+  <!-- Page will Inject Here End -->
+  
+  <!-- footer area start -->
+  <app-public-footer></app-public-footer>
+  <!-- footer area end -->
+  
+  <!-- Product item details Modal start -->
+  <div class="modal fade" id="item-modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <!-- close button start -->
+          <div class="close-button" data-dismiss="modal"><i class="fa fa-times-circle"></i></div>
+          <!-- product modal details start -->
+          <div class="product-modal">
+              <!-- single product item start -->
+              <div class="single-product-item floating">
+                  <a href="product-details.htm" class="item-img">
+                      <img src="/assets/img\products\1.jpg" alt="">
+                      <span class="sale"></span>
+                  </a>
+                  <div class="item-info">
+                      <h2><span class="item-title large">Special sales Cotton stretch Men T shirt men's o-neck short-sleeve</span></h2>
+                      <div class="info">
+                          <p>Reference: <span>demo_33</span></p>
+                          <p>Condition: <span>New product</span></p>
+                      </div>
+                      <h3 class="item-price"> $28.98 <span class="old-price">$30.51</span> </h3>
+                      <p class="product-descriptions"> Long printed dress with thin adjustable straps. V-neckline and wiring under the bust with ruffles at the bottom of the dress.</p>
+                      <div class="cart-plus-minus">
+                          <label>Quantity: </label>
+                          <input class="cart-plus-minus-box" type="text" name="qtybutton" value="1">
+                      </div>
+                      <div class="actions">
+                          <a href="#" class="single-action">add to cart</a>
+                          <a href="#" class="single-action"> <i class="fa fa-envelope"></i> </a>
+                          <a href="#" class="single-action"> <i class="fa fa-print"></i> </a>
+                          <a href="#" class="single-action"> <i class="zmdi zmdi-favorite-outline"></i> </a>
+                      </div>
+                      <div class="size">
+                          size
+                          <form action="#">
+                              <select name="size" id="size">
+                                  <option value="1">s
+                                  <option value="2">m
+                                  <option value="3">l
+                              </select>
+                          </form>
+                      </div>
+                      <div class="color">
+                          color
+                          <form action="#">
+                              <div class="single-color">
+                                  <span></span>
+                                  <input type="radio" name="color" value="color1"> 
+                              </div>
+                              <div class="single-color">
+                                  <span></span>
+                                  <input type="radio" name="color" value="color2"> 
+                              </div>
+                              <div class="single-color">
+                                  <span></span>
+                                  <input type="radio" name="color" value="color3"> 
+                              </div>
+                              <div class="single-color">
+                                  <span></span>
+                                  <input type="radio" name="color" value="color4"> 
+                              </div>
+                          </form>
+                      </div>
+                      <div class="stock">
+                          <p> 300 Items <span>In stock</span></p>
+                      </div>
+                      <div class="social-share">
+                          <a href="#" target="_blank"><i class="fa fa-twitter"></i> twitter</a>
+                          <a href="#" target="_blank"><i class="fa fa-facebook"></i> share</a>
+                          <a href="#" target="_blank"><i class="fa fa-google-plus"></i> Google+</a>
+                          <a href="#" target="_blank"><i class="fa fa-pinterest"></i> pinterest</a>
+                      </div>
+                  </div>
+              </div>
+              <!-- single product item end -->
+          </div>
+          <!-- product modal details end -->
+        </div>
+          <!-- close button end -->
+      </div>
+    </div>
+  </div>
+  <!-- Product item details Modal end -->
+
+  
+ 
+
+  
