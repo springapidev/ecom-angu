@@ -25,37 +25,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "src/assets/css/normalize.css",
-              "src/assets/css/font-awesome.min.css",
-              "src/assets/css/material-design-iconic-font.min.css",
-              "src/assets/css/bootstrap.min.css",
-              "src/assets/css/animate.css",
-              "src/assets/css/TimeCircles.css",
-              "src/assets/css/owl.carousel.css",
-              "src/assets/css/slicknav.min.css",
-              "src/assets/lib/css/nivo-slider.css",
-              "src/assets/lib/css/preview.css",
-              "src/assets/css/jquery-ui.css",
-              "src/assets/style.css",
-              "src/assets/css/responsive.css",
-              "src/assets/css/custom.css"
+              "src/styles.css"            
+                     
             ],
             "scripts": [
             ],
             "allowedCommonJsDependencies": [
-              "src/assets/js/vendor/modernizr-2.8.3.min.js",
-              "src/assets/js/vendor/jquery-1.12.4.min.js",
-              "src/assets/js/bootstrap.min.js",
-              "src/assets/js/jquery-price-slider.js",
-              "src/assets/js/TimeCircles.js",
-              "src/assets/js/jquery.easing.js",
-              "src/assets/js/jquery.slicknav.min.js",
-              "src/assets/js/owl.carousel.min.js",
-              "src/assets/lib/js/jquery.nivo.slider.js",
-              "src/assets/lib/home.js",
-              "src/assets/js/plugins.js",
-              "src/assets/js/main.js"
+             
             ]
           },
           "configurations": {

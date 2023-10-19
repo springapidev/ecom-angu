@@ -40,6 +40,7 @@ import { PublicPrintersComponent } from './pages/public/public-printers/public-p
 import { PublicComputingComponent } from './pages/public/public-computing/public-computing.component';
 import { PublicStationeryComponent } from './pages/public/public-stationery/public-stationery.component';
 import { PublicPrinterFinderComponent } from './pages/public/public-printer-finder/public-printer-finder.component';
+import { AdminLeftComponent } from './layouts/admin/admin-left/admin-left.component';
 
 
 
@@ -83,6 +84,7 @@ import { PublicPrinterFinderComponent } from './pages/public/public-printer-find
     PublicComputingComponent,
     PublicStationeryComponent,
     PublicPrinterFinderComponent,
+    AdminLeftComponent,
   ],
   imports: [
     BrowserModule,

@@ -18,15 +18,15 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.loadScript('../assets/js/vendor/jquery-1.12.4.min.js');
-    this.loadScript('../assets/js/bootstrap.min.js');
-    this.loadScript('../assets/js/TimeCircles.js');
-    this.loadScript('../assets/js/jquery.easing.js');
-    this.loadScript('../assets/js/jquery.slicknav.min.js');
-    this.loadScript('../assets/js/owl.carousel.min.js');
-    this.loadScript('../assets/lib/js/jquery.nivo.slider.js');
-    this.loadScript('../assets/lib/home.js');
-    this.loadScript('../assets/js/plugins.js');
-    this.loadScript('../assets/js/main.js');
+    // this.loadScript('../assets/js/vendor/jquery-1.12.4.min.js');
+    // this.loadScript('../assets/js/bootstrap.min.js');
+    // this.loadScript('../assets/js/TimeCircles.js');
+    // this.loadScript('../assets/js/jquery.easing.js');
+    // this.loadScript('../assets/js/jquery.slicknav.min.js');
+    // this.loadScript('../assets/js/owl.carousel.min.js');
+    // this.loadScript('../assets/lib/js/jquery.nivo.slider.js');
+    // this.loadScript('../assets/lib/home.js');
+    // this.loadScript('../assets/js/plugins.js');
+    // this.loadScript('../assets/js/main.js');
   }
 }
