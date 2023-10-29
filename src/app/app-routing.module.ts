@@ -26,6 +26,8 @@ import { PublicPrintersComponent } from './pages/public/public-printers/public-p
 import { PublicComputingComponent } from './pages/public/public-computing/public-computing.component';
 import { PublicStationeryComponent } from './pages/public/public-stationery/public-stationery.component';
 import { PublicPrinterFinderComponent } from './pages/public/public-printer-finder/public-printer-finder.component';
+import { ProductAddComponent } from './pages/admin/product-add/product-add.component';
+import { ProductListComponent } from './pages/admin/product-list/product-list.component';
 
 
 const routes: Routes = [
@@ -68,6 +70,8 @@ const routes: Routes = [
   children: [
     { path: 'dashboard', component: AdminDashboardComponent },
     { path: 'profile', component: AdminProfileComponent },
+    { path: 'product/add', component: ProductAddComponent },
+    { path: 'product/list', component: ProductListComponent },
   ]
 },
 

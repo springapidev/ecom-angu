@@ -41,6 +41,10 @@ import { PublicComputingComponent } from './pages/public/public-computing/public
 import { PublicStationeryComponent } from './pages/public/public-stationery/public-stationery.component';
 import { PublicPrinterFinderComponent } from './pages/public/public-printer-finder/public-printer-finder.component';
 import { AdminLeftComponent } from './layouts/admin/admin-left/admin-left.component';
+import { ProductAddComponent } from './pages/admin/product-add/product-add.component';
+import { ProductListComponent } from './pages/admin/product-list/product-list.component';
+import { OrderComponent } from './pages/admin/order/order.component';
+import { OrderHistoryComponent } from './pages/admin/order-history/order-history.component';
 
 
 
@@ -85,6 +89,10 @@ import { AdminLeftComponent } from './layouts/admin/admin-left/admin-left.compon
     PublicStationeryComponent,
     PublicPrinterFinderComponent,
     AdminLeftComponent,
+    ProductAddComponent,
+    ProductListComponent,
+    OrderComponent,
+    OrderHistoryComponent,
   ],
   imports: [
     BrowserModule,

@@ -15,45 +15,61 @@ export class LayoutAdminComponent implements OnInit {
   }
   ngAfterViewInit(): void{
     // Dynamically add frontend-specific CSS files
-    const body = this.document.body;
-    body.classList.add('vertical-layout', 'vertical-menu', '2-columns', 'navbar-sticky', 'mat-typography');
-    body.setAttribute('data-menu', 'vertical-menu');
-    body.setAttribute('data-col', '2-columns');
+    // const body = this.document.body;
+    // body.classList.add('vertical-layout', 'vertical-menu', '2-columns', 'navbar-sticky', 'mat-typography');
+    // body.setAttribute('data-menu', 'vertical-menu');
+    // body.setAttribute('data-col', '2-columns');
     
+    const html=this.document.documentElement;
+    html.classList.remove('no-js');
+    // Add the specified attributes
+    html.setAttribute('lang', 'en');
+    html.classList
+    html.setAttribute('data-layout', 'vertical');
+    html.setAttribute('data-topbar', 'light');
+    html.setAttribute('data-sidebar', 'dark');
+    html.setAttribute('data-sidebar-size', 'lg');
+    html.setAttribute('data-sidebar-image', 'none');
+    html.setAttribute('data-preloader', 'disable');
+ 
+    // Dynamically add frontend-specific JS files
+  const layoutJsFiles = [     
+    "assets/admin/js/layout.js"   
+        
+    // Add more JS files as needed
+  ];
+
+  for (const jsFile of layoutJsFiles) {
+    const script = this.renderer.createElement('script');
+    script.type = 'text/javascript';
+    script.src = jsFile;
+    this.renderer.appendChild(this.document.head, script);
+  }
+
     const cssFiles = [
       'assets/admin/test.css',
-      'assets/admin/fonts/feather/style.min.css',
-      'assets/admin/fonts/simple-line-icons/style.css',
-      'assets/admin/fonts/font-awesome/css/font-awesome.min.css',
-      'assets/admin/vendors/css/perfect-scrollbar.min.css',
-      'assets/admin/vendors/css/prism.min.css',
-      'assets/admin/vendors/css/switchery.min.css',
-      'assets/admin/css/bootstrap.css',
-      'assets/admin/css/bootstrap-extended.css',
-      'assets/admin/css/colors.css',
-      'assets/admin/css/components.css',
-      'assets/admin/css/themes/layout-dark.css',
-      'assets/admin/css/plugins/switchery.css',
-      'assets/admin/css/style.css'
+      'assets/admin/css/bootstrap.min.css',
+      'assets/admin/css/icons.min.css',
+      'assets/admin/css/app.min.css',
+      'assets/admin/css/custom.min.css'     
     ];
-
+    
     for (const cssFile of cssFiles) {
       const link = this.renderer.createElement('link');
       link.setAttribute('rel', 'stylesheet');
-      link.setAttribute('type', 'text/css');
       link.setAttribute('href', cssFile);
       this.renderer.appendChild(this.document.head, link);
     }
+    
 
-    // Dynamically add frontend-specific JS files
 // Dynamically load frontend-specific JS files with proper order
-this.loadScript('assets/admin/vendors/js/vendors.min.js')
-.then(() => this.loadScript('assets/admin/vendors/js/switchery.min.js'))
-.then(() => this.loadScript('assets/admin/js/core/app-menu.js'))
-.then(() => this.loadScript('assets/admin/js/core/app.js'))
-.then(() => this.loadScript('assets/admin/js/notification-sidebar.js'))
-.then(() => this.loadScript('assets/admin/js/customizer.js'))
-.then(() => this.loadScript('assets/admin/js/scroll-top.js'))
+this.loadScript('assets/admin/libs/bootstrap/js/bootstrap.bundle.min.js')
+.then(() => this.loadScript('assets/admin/libs/simplebar/simplebar.min.js'))
+.then(() => this.loadScript('assets/admin/libs/node-waves/waves.min.js'))
+.then(() => this.loadScript('assets/admin/libs/feather-icons/feather.min.js'))
+.then(() => this.loadScript('assets/admin/js/pages/plugins/lord-icon-2.1.0.js'))
+.then(() => this.loadScript('assets/admin/js/plugins.js'))
+.then(() => this.loadScript('assets/admin/js/app.js'))
 .catch(error => console.error('Error loading script: ', error));
 }
 
