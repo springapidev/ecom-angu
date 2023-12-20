@@ -1,0 +1,449 @@
+<div class="container-fluid ">
+    <div class="container bg-white pt-4 ">
+
+        <div class="row">
+
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3" *ngIf="productDetails">
+
+                <div class="image-container" id="magnifierContainer">
+                    <img class="image" [src]="serverport + productDetails.images[0]"
+                        alt="Image description" id="magnifierImage">
+                    <div class="text-overlay">Hover for Details</div>
+                    <div class="show-photo-text" data-bs-toggle="modal" data-bs-target="#lightboxModal">Show Photo</div>
+                </div>
+
+                <!-- Lightbox Modal -->
+                <div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <img [src]="serverport + productDetails.images[0]"
+                                    alt="Image description" class="w-100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 single-product-border" >
+                <div class="mt-xl-0 mt-5">
+                    <div class="d-flex">
+                        <div class="flex-shrink-1">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page"><a [routerLink]="['/category',productDetails.category]">{{productDetails.category}}</a></li>
+                                 
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="flex-grow-1">
+                            <h4>{{ productDetails.title }}</h4>
+
+                        </div>
+                        <div class="flex-shrink-0">
+                            <div>
+                                <img src="/assets/images/logo-dark.png" height="20" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-2 align-items-center mt-3">
+                        <div class="text-muted fs-16">
+                            <span class="mdi mdi-star text-warning"></span>
+                            <span class="mdi mdi-star text-warning"></span>
+                            <span class="mdi mdi-star text-warning"></span>
+                            <span class="mdi mdi-star text-warning"></span>
+                            <span class="mdi mdi-star text-warning"></span>
+                        </div>
+                        <div class="text-muted">( 5.50k Customer Review )</div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="p-2 border border-dashed rounded">
+                                <div class="d-flex align-items-center">
+
+                                    <div class="flex-grow-1">
+                                        <h3 class="mb-0 text-green">{{ productDetails.price | currency: 'EUR': 'symbol-narrow':'1.2-2':'es' }}</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+
+                    </div>
+
+                    <div class="mt-4 text-muted">
+                        <p class="justify-content-between">{{productDetails.description}}</p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="mt-4">
+                                <ul class="list-inline text-muted">
+                                    <li class="list-inline-item">Stock : <span class="fw-medium">
+                                            <img src="https://www.cartuchea.com/wp-content/uploads/availability_10.png"
+                                                height="16" />
+                                        </span></li>
+                                </ul>
+
+                                <div class="input-step">
+                                    <button type="button" class="minus" (click)="decreaseQuantity(productDetails)">–</button>
+                                    <input type="number" class="product-quantity" value="{{productDetails.quantity}}" min="1" max="500">
+                                    <button type="button" class="plus" (click)="increaseQuantity(productDetails)">+</button>
+                                </div>
+                                <button type="button" class="btn btn-green m-2 text-white" (click)="addToCart(productDetails)">Añadir al carrito</button>
+                            </div>
+                        </div>
+                        <!-- end col -->
+
+
+                        <!-- end col -->
+
+                    </div>
+                    <!-- end row -->
+
+                    <div class="d-flex flex-wrap gap-2 align-items-center mt-3">
+                        <div class="text-muted fs-16">
+                            <span class="ri ri-heart-line"></span>
+
+                        </div>
+                        <div class="text-muted"><a href="">Añadir a favoritos</a></div>
+                    </div>
+
+                    <!-- Base Example -->
+                    <div class="accordion" id="default-accordion-example">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    INFORMACIÓN ADICIONAL
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show border-bottom"
+                                aria-labelledby="headingOne" data-bs-parent="#default-accordion-example">
+                                <div class="accordion-body">
+                                    <h4>FICHA:</h4>
+                                    <div class="simplebar-content" style="padding: 2px 0px 0px;">
+                                        <div class="d-flex align-items-center px-4 mb-0">
+                                            <div class="flex-grow-1">
+                                                <h4 class="mb-0 fs-11 text-muted text-uppercase">Marca</h4>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <span class="fw-medium">{{productDetails.brand || '-'}}</span>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="d-flex align-items-center px-4 mt-0 pt-1 mb-0">
+                                            <div class="flex-grow-1">
+                                                <h4 class="mb-0 fs-11 text-muted text-uppercase">Páginas</h4>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <span class="fw-medium">700</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex align-items-center px-4 mt-0 pt-1 mb-0">
+                                            <div class="flex-grow-1">
+                                                <h4 class="mb-0 fs-11 text-muted text-uppercase">Programa</h4>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <span class="fw-medium">{{productDetails.program || '-'}}</span>
+                                            </div>
+                                        </div>
+                                        <!-- End chat-message-list -->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <ul class="list-inline text-muted">
+                                <li class="list-inline-item">SKU : <span class="fw-medium">{{productDetails.sku}}</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <ul class="list-inline text-muted">
+                                <li class="list-inline-item">Categorías : <span class="fw-medium">{{productDetails.category}}</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-12 tags" *ngIf="productDetails.tags">
+                            <h6>Models:</h6>
+                            <a  *ngFor="let tag of productDetails.tags" class="p-2 border" href="">{{tag}}</a>                           
+                        </div>
+                    </div>
+                    <div class="row mb-5">
+                        <div class="col-12">
+
+                            <ul class="nav">
+                                <li class="nav-item mt-2">
+                                    <h6>Compartir</h6>
+                                </li>
+                                <li class="nav-item"><a rel="no-follow" class="nav-link text-green"
+                                        ng-reflect-router-link="https://www.facebook.com/Cartu"
+                                        href="/https:/www.facebook.com/Cartuchea-104297464679480"><i
+                                            class="ri-facebook-fill "></i></a></li>
+                                <li class="nav-item"><a rel="no-follow" class="nav-link text-green"
+                                        ng-reflect-router-link="https://www.instagram.com/cart"
+                                        href="/https:/www.instagram.com/cartucheayahorra"><i
+                                            _ngcontent-ng-c2166327330="" class="ri-instagram-line"></i></a>
+                                </li>
+                                <li class="nav-item"><a rel="no-follow" class="nav-link text-green"
+                                        ng-reflect-router-link="https://www.youtube.com/channe"
+                                        href="/https:/www.youtube.com/channel/UCc2zgk96OiBOHOKUh2MFaQQ"><i
+                                            class="ri-youtube-line"></i></a></li>
+                                <li class="nav-item"><a rel="no-follow" class="nav-link text-green"
+                                        ng-reflect-router-link="https://api.whatsapp.com/send?"
+                                        href="/https:/api.whatsapp.com/send%3Fphone%3D%2B34644913812"><i
+                                            class="ri-whatsapp-line "></i></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <!-- product-content -->
+
+
+                    <!-- end card body -->
+                </div>
+
+            </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 navbar-menu">
+                <h6 class="card-title mb-0 flex-grow-1">CATEGORÍAS</h6>
+
+                <!--- Category Menu-->
+                <ul class="navbar-nav" id="navbar-category">
+
+
+                    <li class="nav-item">
+                        <a class="nav-link menu-link" href="#question" data-bs-toggle="collapse" role="button"
+                            aria-expanded="false" aria-controls="question">
+                            <span data-key="t-question">Limpieza y desinfección</span>
+                        </a>
+                        <div class="menu-dropdown collapse" id="question">
+                            <ul class="nav nav-sm flex-column">
+                                <li class="nav-item">
+                                    <a [routerLink]="'/question/add'" class="nav-link" data-key="t-add"> Gel
+                                        hidroalcohólico </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="'/question/list'" class="nav-link" data-key="t-list"> Mascarillas
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link menu-link" href="#quiz" data-bs-toggle="collapse" role="button"
+                            aria-expanded="false" aria-controls="quiz">
+                            <span data-key="t-quiz">Quiz</span>
+
+                        </a>
+                        <div class="menu-dropdown collapse" id="quiz">
+                            <ul class="nav nav-sm flex-column">
+                                <li class="nav-item">
+                                    <a [routerLink]="'/quiz/add'" class="nav-link" data-key="t-add"> Add </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a [routerLink]="'/quiz/list'" class="nav-link" data-key="t-list"> List </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+                <!------ product List -->
+
+                <div class="card">
+                    <div class="card-header d-flex align-items-center">
+                        <h6 class="card-title mb-0 flex-grow-1">DESTACADOS</h6>
+                        <a class="text-muted" [routerLink]="['/featured-all']">
+                            See All <i class="ri-arrow-right-line align-bottom"></i>
+                        </a>
+                    </div>
+                    <div class="card-body" *ngIf="productsFeatured">
+                        <div class="d-flex align-items-center" *ngFor="let product of productsFeatured">
+                            <img [src]="serverport + product.images[0]" alt=""
+                                class="avatar-sm object-cover rounded-circle">
+                            <div class="ms-2">
+                                <a [routerLink]="['/producto',product.slug]">
+                                    <h6 class="fs-15 mb-1">{{product.title | featuredTitleFormat}}</h6>
+                                </a>
+                                <p class="mb-0 text-muted">{{ product.price | currency: 'EUR': 'symbol-narrow':'1.2-2':'es' }}</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+
+
+
+                <!--- Rating Start-->
+
+                <div>
+                    <div class="pb-3">
+                        <div class="bg-light px-3 py-2 rounded-2 mb-2">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-grow-1">
+                                    <div class="fs-16 align-middle text-warning">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-half-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <h6 class="mb-0">4.5 out of 5</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-muted">Total <span class="fw-medium">5.50k</span> reviews
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <div class="row align-items-center g-2">
+                            <div class="col-auto">
+                                <div class="p-2">
+                                    <h6 class="mb-0">5 star</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-2">
+                                    <div class="progress animated-progress progress-sm">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 50.16%"
+                                            aria-valuenow="50.16" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="p-2">
+                                    <h6 class="mb-0 text-muted">2758</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row align-items-center g-2">
+                            <div class="col-auto">
+                                <div class="p-2">
+                                    <h6 class="mb-0">4 star</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-2">
+                                    <div class="progress animated-progress progress-sm">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 19.32%"
+                                            aria-valuenow="19.32" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="p-2">
+                                    <h6 class="mb-0 text-muted">1063</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row align-items-center g-2">
+                            <div class="col-auto">
+                                <div class="p-2">
+                                    <h6 class="mb-0">3 star</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-2">
+                                    <div class="progress animated-progress progress-sm">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 18.12%"
+                                            aria-valuenow="18.12" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="p-2">
+                                    <h6 class="mb-0 text-muted">997</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row align-items-center g-2">
+                            <div class="col-auto">
+                                <div class="p-2">
+                                    <h6 class="mb-0">2 star</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-2">
+                                    <div class="progress animated-progress progress-sm">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 7.42%"
+                                            aria-valuenow="7.42" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <div class="p-2">
+                                    <h6 class="mb-0 text-muted">408</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row align-items-center g-2">
+                            <div class="col-auto">
+                                <div class="p-2">
+                                    <h6 class="mb-0">1 star</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-2">
+                                    <div class="progress animated-progress progress-sm">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 4.98%"
+                                            aria-valuenow="4.98" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="p-2">
+                                    <h6 class="mb-0 text-muted">274</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

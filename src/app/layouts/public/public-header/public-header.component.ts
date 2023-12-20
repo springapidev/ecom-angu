@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CartServiceService } from 'src/app/services/cart-service.service';
 
 
 @Component({
@@ -6,8 +8,32 @@ import { Component } from '@angular/core';
   templateUrl: './public-header.component.html',
   styleUrls: ['./public-header.component.css']
 })
-export class PublicHeaderComponent {
+export class PublicHeaderComponent implements OnInit {
 
-  
+  constructor(private cartService: CartServiceService,private router: Router) { }
+  totalItems: number = 0;
+  public products : any = [];
+  public grandTotal !: number;
+  serverport: string = 'http://localhost:8084';
+
+  ngOnInit(): void {
+    this.cartService.getProducts().subscribe(res => {
+      this.products = res;
+      console.log("Products: ",this.products)
+      this.grandTotal = this.cartService.getGrandTotal();
+      this.totalItems =  this.cartService.getLengthOfcartItems();
+    })
+  }
+
+  openCartDetails(){
+    this.router.navigate(['/carrito']);
+  }
+
+  removeItem(item: any){
+    this.cartService.removeCartItem(item);
+  }
+  emptycart(){
+    this.cartService.removeAllCart();
+  }
 
 }

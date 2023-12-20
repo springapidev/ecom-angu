@@ -1,0 +1,52 @@
+#carouselExampleDark{
+    max-height: 550px;
+}
+
+.carousel-caption {
+
+    bottom: 45%!important;
+    padding: 15px 25px;
+    color: #000;
+}
+
+.custom-border {
+    position: relative;
+  }
+
+  .custom-border::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 15;
+    width: 25%;
+    height: 2px; /* Adjust the border height as needed */
+    background-color: green; /* Change this to your desired color */
+  }
+
+  .custom-border::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 73%;
+    height: 2px; /* Adjust the border height as needed */
+    background-color: rgb(165, 155, 155); /* Change this to your desired color */
+  }
+  .border-bottom{
+    border-bottom: 2px solid rgba(2, 160, 2, 1)!important; 
+    display: inline-block;    
+  }
+  .btn-style-link{
+    padding: 0;
+    border-width: 2px;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: transparent!important;
+}
+  
+  .home-h2{
+    font-size: 20px;
+  }
+

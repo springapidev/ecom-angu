@@ -1,0 +1,235 @@
+/*
+Template Name: Velzon - Admin & Dashboard Template
+Author: Themesbrand
+Website: https://themesbrand.com/
+Contact: support@themesbrand.com
+File: Custom Css File
+*/
+
+.text-white{
+    color: #fff;
+}
+.text-green{
+  color: rgba(2, 160, 2, 1);
+}
+.bg-green{
+    background-color:rgba(2, 160, 2, 1);
+}
+.copyright-bg{
+  background-color:rgb(6, 105, 6);
+}
+
+.btn-green{
+    background-color:rgba(2, 160, 2, 1);
+    border-radius: 30px;
+    font-weight: 600px;
+}
+.btn-green:hover{
+    background-color:#000;
+    color: #fff;
+    border-radius: 30px;
+    font-weight: 600px;
+}
+
+.title{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 22px;
+}
+.rounded-input{
+    border-radius: 30px;
+}
+
+.ri-user-line, .ri-shopping-cart-2-line, .ri-heart-line{
+  font-size: 24px!important;
+}
+.custom-wishlist-count{
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  z-index: 1;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  color: #FFF;
+  text-align: center;
+  letter-spacing: 0!important;
+  font-weight: 400!important;
+  font-size: 10px!important;
+  line-height: 15px;
+}
+.custom-cart-count{
+  position: absolute;
+    top: 3px;
+    right: 52px;
+    z-index: 1;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    color: #FFF;
+    text-align: center;
+    letter-spacing: 0!important;
+    font-weight: 400!important;
+    font-size: 10px!important;
+    line-height: 15px;
+}
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    text-align: center;
+   }
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .3px;
+    font-weight: 600;
+  }
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: #fff;
+    content: "/\00a0";
+  }
+  ul.breadcrumb li a {
+    color: #fff;
+    text-decoration: none;
+   
+  }
+  ul.breadcrumb li a:hover {
+    color: rgba(2, 160, 2, 1);;
+    text-decoration: underline;
+  }
+  .breadcrumb-title{
+    font-size: 68px;
+    font-weight: 400;
+  }
+  @media only screen and (max-width: 767px) {
+  .breadcrumb-title{
+    font-size: 40px;
+  }
+  }
+  @media only screen and (min-width: 576px) {
+.card-border{
+  &:not(.no-border)::after {
+     content: '';
+     position: absolute;
+     top: 10%;
+     right: 0;
+     bottom: 10%;
+     width: 1px;
+     background-color:  rgb(79, 236, 79); /* Set your desired border color */
+   }
+}
+.single-product-border{
+  &:not(.no-border)::after {
+     content: '';
+     position: absolute;
+     top: 2%;
+     right: 0;
+     bottom: 5%;
+     width: 1px;
+     background-color:  rgb(79, 236, 79); /* Set your desired border color */
+   }
+}
+  }
+
+  .title-container {
+    line-height: 45px;
+    font-size: 35px;
+}
+
+.star-rating {
+  width: 0;
+  position: relative;
+  display: inline-block;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDguOSIgaGVpZ2h0PSIxMDMuNiIgdmlld0JveD0iMCAwIDEwOC45IDEwMy42Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2UzZTZlNjt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPnN0YXJfMDwvdGl0bGU+PGcgaWQ9IkxheWVyXzIiIGRhdGEtbmFtZT0iTGF5ZXIgMiI+PGcgaWQ9IkxheWVyXzEtMiIgZGF0YS1uYW1lPSJMYXllciAxIj48cG9seWdvbiBjbGFzcz0iY2xzLTEiIHBvaW50cz0iMTA4LjkgMzkuNiA3MS4zIDM0LjEgNTQuNCAwIDM3LjYgMzQuMSAwIDM5LjYgMjcuMiA2Ni4xIDIwLjggMTAzLjYgNTQuNCA4NS45IDg4LjEgMTAzLjYgODEuNyA2Ni4xIDEwOC45IDM5LjYiLz48L2c+PC9nPjwvc3ZnPg0K);
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  cursor: pointer;
+}
+
+.star-rating .star-value {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url(data:image/svg+xml;base64,PHN2Zw0KCXhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwOC45IiBoZWlnaHQ9IjEwMy42IiB2aWV3Qm94PSIwIDAgMTA4LjkgMTAzLjYiPg0KCTxkZWZzPg0KCQk8c3R5bGU+LmNscy0xe2ZpbGw6I2YxYzk0Nzt9PC9zdHlsZT4NCgk8L2RlZnM+DQoJPHRpdGxlPnN0YXIxPC90aXRsZT4NCgk8ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIj4NCgkJPGcgaWQ9IkxheWVyXzEtMiIgZGF0YS1uYW1lPSJMYXllciAxIj4NCgkJCTxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSI1NC40IDAgNzEuMyAzNC4xIDEwOC45IDM5LjYgODEuNyA2Ni4xIDg4LjEgMTAzLjYgNTQuNCA4NS45IDIwLjggMTAzLjYgMjcuMiA2Ni4xIDAgMzkuNiAzNy42IDM0LjEgNTQuNCAwIi8+DQoJCTwvZz4NCgk8L2c+DQo8L3N2Zz4NCg==);
+  background-repeat: repeat-x;
+}
+
+
+
+.custom-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-card img {
+  transition: transform 0.3s ease;
+}
+
+.custom-card:hover img {
+  transform: scale(1.1);
+}
+
+.custom-card .card-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  padding: 1rem;
+  color: #fff;
+}
+
+.border-bottom{
+  border-bottom: 1px solid #b10303;
+}
+.tags > a {
+  width: fit-content;
+  border: 1px solid #9e9a9a;
+  padding: 5px 3px;
+  margin: 8px;
+}
+
+
+
+  /******** product Grid ************/
+
+  .explore-box .explore-img {
+    height: 120px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.text-bg{
+  display: inline-block;
+  background-color: green;
+  padding: 5px 10px;
+}
+
+.outer-container {
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for the first content (Add to Cart button) */
+.content-1 {
+  display: block; /* Initially show the content */
+}
+
+/* Style for the second content (Cart icon) */
+.content-2 {
+  display: none; /* Initially hide the content */
+}
+
+/* Hide the first content when hovering over the outer container */
+.outer-container:hover .content-1 {
+  display: none;
+}
+
+/* Show the second content when hovering over the outer container */
+.outer-container:hover .content-2 {
+  display: block;
+}

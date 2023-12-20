@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./public-my-account.component.css']
 })
 export class PublicMyAccountComponent {
+  isRegistrationDivVisible = true;
+  buttonText = 'ACCEDER';
 
+  toggleDivs() {
+    this.isRegistrationDivVisible = !this.isRegistrationDivVisible;
+    this.buttonText = this.isRegistrationDivVisible ? 'ACCEDER' : 'REGISTRARSE';
+  }
 }

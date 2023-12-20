@@ -1,150 +1,161 @@
-
-<div class="breadcrumb-area">
+<div class="container-fluid bg-black mt-0">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-             
-                    <h1>CARRITO</h1>
-                    <ol class="breadcrumb">
-                        <li><a href="/"><i class="fa fa-home"></i> INICIO</a></li>
-                        <li class="active">CARRITO</li>
-                      </ol>
-                </div>
-        </div>
-    </div>
-</div>
-<div class="cart-area mt-40">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <!-- cart table start -->
-                <div class="table-responsive">
-                    <table class="table-bordered table">
-                        <thead>
-                            <tr>
-                                <!-- product img title -->
-                                <th class="item-img">Product</th>
-                                <!-- product name title -->
-                                <th class="product-name">description</th>
-                                <!-- stock status -->
-                                <th class="stock text-center">Availability</th>
-                                <!-- unit price title -->
-                                <th class="unit-price text-right"> unit Price</th>
-                                <!-- quantity -->
-                                <th class="quantity text-center">Quantity</th>
-                                <!-- remove button -->
-                                <th class="remove-icon text-center"></th>
-                                <!-- unit price title -->
-                                <th class="total-price text-right"> total Price</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-center">
-                            <tr>
-                                <!-- product img end -->
-                                <td class="item-img">
-                                    <a href="single-product.html">
-                                        <img src="img\products\12.jpg" alt="">
-                                    </a>
-                                </td>
-                                <!-- product img end -->
-                                <!-- product name start -->
-                                <td class="cart-product-name text-left">
-                                    <a href="single-product.html">Skmei Luxury Brand Mens Sports Watches Dive 50m Digital LED</a>
-                                    <p>SKU : demo_33</p>
-                                    <p>Size : S, Color : Yellow</p>
-                                </td>
-                                <!-- product name end -->
-                                <!-- stock status start -->
-                                <td class="stock">
-                                    <span>in stock</span>
-                                </td>
-                                <!-- stock status end -->
-                                <!-- price start -->
-                                <td class="unit-price text-right">
-                                    <span>$28.98</span>
-                                </td>
-                                <!-- price end -->
-                                <!-- quantity start -->
-                                <td class="quantity">
-                                        <input class="" type="text" name="qtybutton" value="1">
-                                </td>
-                                <!-- quantity end -->
-                                <!-- remove icon start -->
-                                <td class="remove-icon">
-                                    <button> <i class="fa fa-trash"></i> </button>
-                                </td>
-                                <!-- remove icon end -->
-                                <!-- price start -->
-                                <td class="unit-price text-right">
-                                    <span>$28.98</span>
-                                </td>
-                                <!-- price end -->
-                            </tr>
-                            <tr>
-                                <!-- product img end -->
-                                <td class="item-img">
-                                    <a href="single-product.html">
-                                        <img src="img\products\1.jpg" alt="">
-                                    </a>
-                                </td>
-                                <!-- product img end -->
-                                <!-- product name start -->
-                                <td class="cart-product-name text-left">
-                                    <a href="product-details.htm">Special sales Cotton stretch Men T shirt men's o-neck short-sleeve</a>
-                                    <p>SKU : demo_33</p>
-                                    <p>Size : S, Color : Yellow</p>
-                                </td>
-                                <!-- product name end -->
-                                <!-- stock status start -->
-                                <td class="stock">
-                                    <span>in stock</span>
-                                </td>
-                                <!-- stock status end -->
-                                <!-- price start -->
-                                <td class="unit-price text-right">
-                                    <span>$27.00</span>
-                                </td>
-                                <!-- price end -->
-                                <!-- quantity start -->
-                                <td class="quantity">
-                                    <input class="" type="text" name="qtybutton" value="1">
-                                </td>
-                                <!-- quantity end -->
-                                <!-- remove icon start -->
-                                <td class="remove-icon">
-                                    <button> <i class="fa fa-trash"></i> </button>
-                                </td>
-                                <!-- remove icon end -->
-                                <!-- price start -->
-                                <td class="unit-price text-right">
-                                    <span>$27.00</span>
-                                </td>
-                                <!-- price end -->
-                            </tr>
-                        </tbody>
-                        <tfoot class="text-right">
-                            <tr>
-                                <td colspan="3" rowspan="3"></td>
-                                <td colspan="3"> <strong> Total products</strong></td>
-                                <td colspan="1">$55.98</td>
-                            </tr>
-                            <tr>
-                                <td colspan="3"><strong>Total shipping</strong></td>
-                                <td colspan="1">$7.00</td>
-                            </tr>
-                            <tr>
-                                <td colspan="3"><strong>Total</strong></td>
-                                <td colspan="1">$62.98</td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
-                <!-- cart table end -->
-                <div class="buttons mt-20">
-                    <a href="#" class="stock"> <span><i class="fa fa-angle-left"></i> continue shopping</span></a>
-                    <a href="checkout.htm" class="stock"> <span> proceed to checkout <i class="fa fa-angle-right"></i></span></a>
+            <div class="col-12 text-white text-center p-5">
+                <!-- <div class="d-flex justify-content-center align-items-center">
+                    <h1 class="breadcrumb-title text-white">CONTACTAR</h1>
+                </div> -->
+                <div class="d-flex justify-content-center align-items-center">
+                    <ul class="breadcrumb">
+                        <li><a [routerLink]="['/carrito']" class="step-cart"><i class="fa fa-home"></i> CARRITO</a></li>
+                            <li><a [routerLink]="['/finalizar-compra']" class="step-cart"><i class="fa fa-home"></i> FINALIZAR COMPRA</a></li>
+                        <li class="active step-cart">PEDIDO COMPLETADO</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<div class="container bg-white pt-3" *ngIf="products.length !=0">
+    <div class="row">
+            <div class="col-12 col-xs-12 col-sm-12 col-md-8 col-xl-8 col-xxl-8">
+                <div class="row align-items-center gy-3 mb-3">
+                    <div class="col-sm">
+                        <div>
+                            <h5 class="fs-14 mb-0">Your Cart ({{totalItems}} items)</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-auto">
+                        <a [routerLink]="['/']" class="link-primary text-decoration-underline">Continue Shopping</a>
+                    </div>
+                </div>
+                <div class="card-table">
+                    <div class="cart-product">
+                        <table class="table table-responsive">
+                            <thead>
+                                <tr>
+                                    <th>Action</th>
+                                    <th>Sr.No</th>
+                                    <th>Product Image</th>
+                                    <th>Product Name</th>                         
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>SUBTOTAL (IVA INC.)</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let item of products; let i = index">
+                                    <td>
+                                        <button (click)="removeItem(item)" class="btn btn-danger"><i class="ri-delete-bin-7-fill"></i></button>
+                                    </td>
+                                    <td>{{i+1}}</td>
+                                    <td><a [routerLink]="['/producto/', item.slug]" target="_blank">{{item.title}}</a></td>
+                                    <td><img style="width: 90px;" [src]="serverport + item.images[0]" alt=""></td>                                  
+                                    <th style="width: 12%; padding-top:18px;">{{item.price  | number: '1.2-2': 'es' }}</th>
+                                    <td style="width: 12%;">
+                                        <div class="input-step">
+                                            <button type="button" class="minus" (click)="decreaseQuantity(item)">–</button>
+                                            <input type="number" class="product-quantity" value="{{item.quantity}}" min="1" max="500">
+                                            <button type="button" class="plus" (click)="increaseQuantity(item)">+</button>
+                                        </div>
+                                    </td>
+                                    <td style="width: 12%; padding-top:18px; font-weight: bold;">{{item.total  | number: '1.2-2': 'es' }}</td>
+                                    
+                                </tr>
+                               
+                                <tr>
+                                    <td colspan="4"></td>
+                                    <td colspan="2"><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>                             
+                                    <td><a [routerLink]="['/finalizar-compra']" class="btn btn-green btn-label right ms-auto"><i class="ri-arrow-right-line label-icon align-bottom fs-16 ms-2"></i> Checkout</a>
+                                    </td>
+                                  
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+    
+    
+    
+    
+                
+            </div>
+            <div class="col-12 col-xs-12 col-sm-12 col-md-4 col-xl-4 col-xxl-4">
+                <div class="sticky-side-div">
+                    <div class="card">
+                        <div class="card-header border-bottom-dashed">
+                            <h5 class="card-title mb-0">Order Summary</h5>
+                        </div>
+                        <div class="card-header bg-soft-light border-bottom-dashed">
+                            <div class="text-center">
+                                <h6 class="mb-2">Have a <span class="fw-semibold">promo</span> code ?</h6>
+                            </div>
+                            <div class="hstack gap-3 px-3 mx-n3">
+                                <input class="form-control me-auto" type="number" id="discount" [(ngModel)]="discount"  placeholder="Enter coupon code" aria-label="Add Promo Code here...">
+                                <button class="btn btn-green w-xs" (click)="setDiscount(discount)">Apply</button>
+                            </div>
+                        </div>
+                        <div class="card-body pt-2">
+                            <div class="table-responsive">
+                                <table class="table table-borderless mb-0">
+                                    <tbody>
+                                        <tr>
+                                            <td>Sub Total :</td>
+                                            <td class="text-end" id="cart-subtotal">{{totalAmount |  currency: 'EUR': 'symbol-narrow':'1.2-2':'es'}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Discount <span class="text-muted">(VELZON15)</span> : </td>
+                                            <td class="text-end" id="cart-discount">- {{discount | number: '1.2-2': 'es'}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Shipping Charge :</td>
+                                            <td class="text-end" id="cart-shipping">{{shippingCharge | number: '1.2-2': 'es' }}</td>
+                                        </tr>
+                                      
+                                        <tr class="table-active">
+                                            <th  colspan="1">Total (IVA inc.):</th>
+                                            <td class="text-end" colspan="2">
+                                                <span class="fw-semibold" id="cart-total">
+                                                    <span class="text-green fs-3"> ${{grandTotal |  currency: 'EUR': 'symbol-narrow':'1.2-2':'es'}}</span>
+                                                    <p class="small">(incluye <span class="text-green">{{vatAmount |  currency: 'EUR': 'symbol-narrow':'1.2-2':'es'}} </span>I.V.A. 21%)</p>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- end table-responsive -->
+                        </div>
+                    </div>
+    
+                    <div class="alert border-dashed alert-danger" role="alert">
+                        <div class="d-flex align-items-center">
+                            <!-- <lord-icon src="https://cdn.lordicon.com/nkmsrxys.json" trigger="loop" colors="primary:#121331,secondary:#f06548" style="width:80px;height:80px"></lord-icon> -->
+                            <div class="ms-2">
+                                <h5 class="fs-14 text-danger fw-semibold"> Buying for a loved one?</h5>
+                                <p class="text-black mb-1">Gift wrap and personalised message on card, <br>Only for <span class="fw-semibold">$9.99</span> USD </p>
+                                <button type="button" class="btn ps-0 btn-sm btn-link text-danger text-uppercase">Add Gift Wrap</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    
+    
+    
+    <div class="container d-flex align-items-center justify-content-center" *ngIf="products.length === 0">
+        <div class="card text-center  p-5">
+          <h3 class="mb-3">Your cart is empty!</h3>
+      
+          <img src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90"
+            alt="" class="img-fluid w-50 mx-auto d-block">
+          
+          <div class="d-grid mt-3">
+            <button routerLink="/" class="btn btn-green">Shop Now</button>
+          </div>
+        </div>
+      </div>
+      

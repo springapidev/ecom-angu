@@ -1,411 +1,1123 @@
-<header>
-    <!-- header top start -->
-    <div class="header-top-area">
-        <div class="container">
-            <div class="row">
-                <div class="top-content">
-                    <div class="col-lg-6">
-                        <div class="header-address">
-                            <span>CARTUCHEA Y AHORRA</span>
-                            
-                        </div>
-                        <div class="header-address">
-                            <span>Hotline:</span>
-                            <a href="tel:966354065"> 966 35 40 65</a>
-                        </div>
-                        <div class="header-address">
-                            <span>Email:</span>
-                            <a href="mailto:ayuda@cartuchea.com">ayuda(At)cartuchea.com</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="header-menu">
-                            <ul>
-                                <li><a  [routerLink]="['/contactar']"> Contactar</a></li>
-                                <li><a  [routerLink]="['/envios']"> Envíos</a></li>
-                                <li><a  [routerLink]="['/terminos-y-condiciones']"> Términos y Condiciones</a></li>
-                                <li><a [routerLink]="['/buscador-de-impresoras']">  Buscador de Impresoras</a></li>      
-                                
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- header top end -->
-    
-    <!-- main header start -->
-    <div class="main-header-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-12">
-                    <!-- logo start -->
-                    <a href="/" class="logo"> <img src="/assets/img\logo_cartuchea.png" alt="Cartuchea" width="209" height="40"> </a>
-                    <!-- logo end -->
-                </div>
-                <div class="col-md-9 col-sm-12">
-                    <div class="row">
-                        <div class="col-lg-9 col-md-8 col-sm-8">
-                            <!-- category bar start -->
-                            <div class="catagory-bar">
-                                <div class="header-search">
-                                    <form action="#" method="GET">
-                                        <input type="text" placeholder="Buscar por consumible o impresora...">
-                                        <span>
-                                        <select name="select" id="select">
-                                            <option value="">Todas Las Categorías
-                                            <option value="12">Fashion
-                                            <option value="22">--Dresses
-                                            <option value="26">---Sweater
-                                            <option value="27">---Evening
-                                            <option value="28">---Day
-                                            <option value="29">---Sports
-                                            <option value="23">--Handbags
-                                            <option value="30">---Shoulder
-                                            <option value="31">---Satchels
-                                            <option value="32">---kids
-                                            <option value="33">---coats
-                                            <option value="24">--shoes
-                                            <option value="34">---Ankle Boots
-                                            <option value="35">---Clog sandals
-                                            <option value="36">---run
-                                            <option value="37">---Books
-                                            <option value="25">--Clothing
-                                            <option value="38">---Coats Jackets
-                                            <option value="39">---Raincoats
-                                            <option value="40">---Jackets
-                                            <option value="41">---T-shirts
-                                            <option value="13">Electronics
-                                            <option value="42">--Laptops
-                                            <option value="46">---Dell Laptops
-                                            <option value="47">---HP Laptops
-                                            <option value="48">---Lenovo Laptops
-                                            <option value="49">---Apple Laptops
-                                            <option value="43">--Camera
-                                            <option value="50">---Digital Cameras
-                                            <option value="51">---Camcorders
-                                            <option value="52">---Photo Accessories
-                                            <option value="53">---Memory Cards
-                                            <option value="44">--Smart Phone
-                                            <option value="54">---Apple Phones
-                                            <option value="55">---Samsung Phones
-                                            <option value="56">---Motorola Phones
-                                            <option value="57">---Lenovo Phones
-                                            <option value="45">--Television
-                                            <option value="58">---All-in-One Computers
-                                            <option value="59">---Towers Only
-                                            <option value="60">---Refurbished Desktops
-                                            <option value="61">---Gaming Desktops
-                                            <option value="14">Furnitured & Decor
-                                            <option value="62">--Chair
-                                            <option value="65">---Dining room
-                                            <option value="66">---bedroom
-                                            <option value="67">--- Home & Office
-                                            <option value="68">---living room
-                                            <option value="63">--Lighting
-                                            <option value="69">---Ceiling Lighting
-                                            <option value="70">---Wall Lighting
-                                            <option value="71">---Outdoor Lighting
-                                            <option value="72">---Smart Lighting
-                                            <option value="64">--Sofa
-                                            <option value="73">---Fabric Sofas
-                                            <option value="74">---Leather Sofas
-                                            <option value="75">---Corner Sofas
-                                            <option value="76">---Sofa Beds
-                                            <option value="15">Jewelry & Watches
-                                            <option value="16">Health & Beauty
-                                            <option value="17">Books & Office
-                                            <option value="18">Sport & Outdoor
-                                            <option value="19">Smart phone & Tablets
-                                            <option value="20">Computer - Laptop
-                                            <option value="21">Accessories
-                                            <option value="77">--Bags & Belts
-                                            <option value="78">--Sunglasses & Readers
-                                            <option value="79">--Socks & Tights
-                                            <option value="80">--Scarves & Gloves
-                                        </select>
-                                        </span>
-                                        <button type="submit">
-                                            <i class="zmdi zmdi-search"></i>
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-                            <!-- category bar end -->
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-4">
-                           
-                            <div class="cart-area-menu">
-                                <ul>
-                                   
-                                     
-                                    <li><a id="cart"> <i class="zmdi zmdi-shopping-cart"></i><sup class="item">2</sup> $55.98</a></li>
-                                    <li><a> <i class="zmdi zmdi-favorite-outline"></i><sup class="item">3</sup></a></li> 
-                                    <li><a [routerLink]="['/mi-cuenta']"><i class="fa fa-user"></i> </a> </li>                                
-                                </ul>
-                            </div>
-                            
+<header class="whb-header whb-sticky-shadow whb-scroll-slide whb-sticky-clone">
+  <div class="whb-main-header">
+    <div
+      class="whb-row whb-top-bar whb-not-sticky-row whb-with-bg whb-border-fullwidth whb-color-light whb-flex-flex-middle whb-hidden-mobile">
+      <div class="container">
+        <div class="whb-flex-row whb-top-bar-inner">
+          <div class="whb-column whb-col-left whb-visible-lg">
+
+            <div class="whb-text-element reset-mb-10  text-element-inline"><span
+                style="font-size: 11px;"><strong>CARTUCHEA Y AHORRA</strong></span></div>
+          </div>
+          <div class="whb-column whb-col-center whb-visible-lg whb-empty-column">
+          </div>
+          <div class="whb-column whb-col-right whb-visible-lg">
+
+            <div
+              class="woodmart-social-icons text-right icons-design-default icons-size- color-scheme-light social-follow social-form-circle">
+              <a rel="nofollow" href="https://www.facebook.com/Cartuchea-104297464679480" target="_blank"
+                class=" woodmart-social-icon social-facebook">
+                <i class="ri-facebook-line"></i>
+                <span class="woodmart-social-icon-name">Facebook</span>
+              </a>
 
 
-                            <!-- total cart start -->
-                            <div class="total-cart">
-                                <!-- <a id="cart"><i class="zmdi zmdi-shopping-cart"></i><b class="price">2</b> $55.98</a>    
-                                <a><i class="zmdi zmdi-favorite-outline"></i>3</a>    -->
-                             
-                                <!-- <div class="cart-button">
-                                    <a id="cart"><i class="zmdi zmdi-shopping-cart"></i><b class="price">2</b> $55.98</a>    
-                                    <a id="cart"><i class="zmdi zmdi-favorite-outline"></i>3</a>   
-                                </div> -->
-                               
-                                <!-- <div class="cart-item">
-                                    <div class="single-item">
-                                        <div class="item-img">
-                                            <a href="#">
-                                                <img src="/assets/img\cart\item1.jpg" alt="" class="img-responsive"> 
-                                            </a>
-                                        </div>
-                                        <div class="item-info">
-                                            <a href="#" class="title"> <span> 1 x </span> Special sa...</a>
-                                            <a href="#">S,</a>
-                                            <a href="#"> Yellow</a>
-                                            <span>$28.98</span> 
-                                        </div>
-                                    </div>
-                                    <div class="single-item">
-                                        <div class="item-img">
-                                            <a href="#">
-                                                <img src="/assets/img\cart\item2.jpg" alt="" class="img-responsive"> 
-                                            </a>
-                                        </div>
-                                        <div class="item-info">
-                                            <a href="#" class="title"> <span> 1 x </span>Skmei Luxu...</a>
-                                            <a href="#">S,</a>
-                                            <a href="#"> Yellow</a>
-                                            <span>$27.00</span> 
-                                        </div>
-                                    </div>
-                                    <div class="subtotal">
-                                        <h3> Shipping: <span>$7.00</span> </h3>  
-                                        <h3> Total: <span>$62.98</span> </h3>  
-                                    </div>
-                                    <div class="checkout">
-                                        <a href="#"> check out <i class="fa fa-angle-right"></i> </a>   
-                                    </div>
-                                </div> -->
-                            </div>
-                            <!-- total cart end -->
-                        </div>
-                    </div>
-                </div>
+
+              <a rel="nofollow" href="https://www.instagram.com/cartucheayahorra/" target="_blank"
+                class=" woodmart-social-icon social-instagram">
+                <i class="ri-instagram-line"></i>
+                <span class="woodmart-social-icon-name">Instagram</span>
+              </a>
+
+              <a rel="nofollow" href="https://www.youtube.com/channel/UCc2zgk96OiBOHOKUh2MFaQQ/" target="_blank"
+                class=" woodmart-social-icon social-youtube">
+                <i class="ri-youtube-line"></i>
+                <span class="woodmart-social-icon-name">YouTube</span>
+              </a>
+
+              <a rel="nofollow" href="https://api.whatsapp.com/send?phone=+34644913812" target="_blank"
+                class="whatsapp-desktop  woodmart-social-icon social-whatsapp">
+                <i class="ri-whatsapp-line"></i>
+                <span class="woodmart-social-icon-name">WhatsApp</span>
+              </a>
+
+              <a rel="nofollow" href="https://api.whatsapp.com/send?phone=+34644913812" target="_blank"
+                class="whatsapp-mobile  woodmart-social-icon social-whatsapp">
+                <i class="fa fa-whatsapp"></i>
+                <span class="woodmart-social-icon-name">WhatsApp</span>
+              </a>
+
+
+
+
             </div>
+
+            <div class="whb-divider-element whb-divider-stretch "></div>
+            <div
+              class="whb-navigation whb-secondary-menu site-navigation woodmart-navigation menu-right navigation-style-bordered"
+              role="navigation">
+              <div class="menu-top-derecha-container">
+                <ul id="menu-top-derecha" class="menu">
+                  <li id="menu-item-3225"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3225 item-level-0 menu-item-design-default menu-simple-dropdown item-event-hover">
+                    <a [routerLink]="['/contactar']" class="woodmart-nav-link"><span class="nav-link-text">Contactar</span></a>
+                  </li>
+                  <li id="menu-item-3265"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3265 item-level-0 menu-item-design-default menu-simple-dropdown item-event-hover">
+                    <a [routerLink]="['/envios']" class="woodmart-nav-link"><span class="nav-link-text">Envíos</span></a>
+                  </li>
+                  <li id="menu-item-3226"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3226 item-level-0 menu-item-design-default menu-simple-dropdown item-event-hover">
+                    <a [routerLink]="['/terminos-y-condiciones']" class="woodmart-nav-link"><span class="nav-link-text">Términos y
+                        Condiciones</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div><!--END MAIN-NAV-->
+            <div class="whb-divider-element whb-divider-stretch "></div>
+          </div>
+          <div class="whb-column whb-col-mobile whb-hidden-lg whb-empty-column">
+          </div>
         </div>
+      </div>
     </div>
-    <!-- main header end -->
-    
-    <!-- header bottom start -->
-    <div id="sticker" class="header-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <!-- category menu start -->
-                    <div class="catagory-menu hidden-sm hidden-xs">
-                        <div class="catagory-heading">
-                            <h2>Todas Las Categorías</h2>
-                        </div>
-                        <div class="catagory-list-menu hidden-menu">
-                            <ul>
-                                <li class="arrow"> <a href="#"> <img src="/assets/img\menu-icon\1.jpg" alt=""> fashion</a>
-                                    <!-- category mega menu start -->
-                                    <div class="c-mega-menu">
-                                        <div class="block">
-                                            <span>
-                                                <a href="#">Dresses </a>
-                                                <a href="#">Sweater</a>
-                                                <a href="#">Evening</a>
-                                                <a href="#">Day</a>
-                                                <a href="#">Sports</a>
-                                            </span>
-                                            <span>
-                                                <a href="#">Handbags </a>
-                                                <a href="#">Shoulder</a>
-                                                <a href="#">Satchels</a>
-                                                <a href="#">kids</a>
-                                                <a href="#">coats</a>
-                                            </span> 
-                                            <span>
-                                                <a href="#">shoes</a>
-                                                <a href="#">Ankle Boots</a>
-                                                <a href="#">Clog sandals </a>
-                                                <a href="#">run</a>
-                                                <a href="#">Books</a>
-                                            </span> 
-                                            <span>
-                                                <a href="#">Clothing</a>
-                                                <a href="#">Coats  Jackets </a>
-                                                <a href="#">Raincoats</a>
-                                                <a href="#">Jackets</a>
-                                                <a href="#">T-shirts</a>
-                                            </span>
-                                        </div>
-                                        <div class="banner">
-                                            <a href="#" class="banner-hover">
-                                                <img src="/assets/img\banner\menu.jpg" alt="banner">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <!-- category mega menu end -->
+
+    <div
+      class="whb-row whb-general-header whb-sticky-row whb-with-bg whb-without-border whb-color-light whb-flex-flex-middle">
+      <div class="container">
+        <div class="whb-flex-row whb-general-header-inner">
+          <div class="whb-column whb-col-left whb-visible-lg">
+            <div class="site-logo">
+              <div class="woodmart-logo-wrap switch-logo-enable">
+                <a [routerLink]="['/']" class="woodmart-logo woodmart-main-logo" rel="home">
+                  <img src="/assets/images/logo_cartuchea.png" alt="Cartuchea" style="max-width: 245px;"> </a>
+                <a [routerLink]="['/']" class="woodmart-logo woodmart-sticky-logo" rel="home">
+                  <img src="/assets/images/logo_cartuchea.png" alt="Cartuchea" style="max-width: 220px;"> </a>
+              </div>
+            </div>
+          </div>
+          <div class="whb-column whb-col-center whb-visible-lg">
+            <div class="whb-space-element " style="width:10px;"></div>
+            <div class="woodmart-search-form">
+              <form role="search" method="get"
+                class="searchform  has-categories-dropdown search-style-with-bg woodmart-ajax-search" action="/"
+                data-thumbnail="1" data-price="1" data-post_type="product" data-count="4" data-sku="0"
+                data-symbols_count="3">
+                <input type="text" class="s" placeholder="Buscar por consumible o impresora..." value="" name="s"
+                  style="padding-right: 68px;" autocomplete="off">
+                <input type="hidden" name="post_type" value="product">
+                <div class="search-by-category input-dropdown">
+                  <div class="input-dropdown-inner woodmart-scroll-content">
+                    <input type="hidden" name="product_cat" value="0">
+                    <a href="#" data-val="0">Categoría</a>
+                    <div class="list-wrapper woodmart-scroll has-scrollbar">
+                      <ul class="woodmart-scroll-content" tabindex="0" style="margin-right: -17px;">
+                        <li style="display:none;"><a href="#" data-val="0">Categoría</a></li>
+                        <li class="cat-item cat-item-43"><a class="pf-value" href="/cat/cartuchos-de-tinta/"
+                            data-val="cartuchos-de-tinta" data-title="Cartuchos de Tinta">Cartuchos de Tinta</a>
+                          <ul class="children">
+                            <li class="cat-item cat-item-98"><a class="pf-value" href="/cat/cartuchos-de-tinta/brother/"
+                                data-val="brother" data-title="Brother">Brother</a>
+                            </li>
+                            <li class="cat-item cat-item-1611"><a class="pf-value" href="/cat/cartuchos-de-tinta/canon/"
+                                data-val="canon" data-title="Canon">Canon</a>
+                            </li>
+                            <li class="cat-item cat-item-12086"><a class="pf-value" href="/cat/cartuchos-de-tinta/dell/"
+                                data-val="dell" data-title="Dell">Dell</a>
+                            </li>
+                            <li class="cat-item cat-item-288"><a class="pf-value" href="/cat/cartuchos-de-tinta/epson/"
+                                data-val="epson" data-title="Epson">Epson</a>
+                            </li>
+                            <li class="cat-item cat-item-393"><a class="pf-value" href="/cat/cartuchos-de-tinta/hp/"
+                                data-val="hp" data-title="HP">HP</a>
+                            </li>
+                            <li class="cat-item cat-item-2517"><a class="pf-value"
+                                href="/cat/cartuchos-de-tinta/lexmark/" data-val="lexmark"
+                                data-title="Lexmark">Lexmark</a>
+                            </li>
+                            <li class="cat-item cat-item-13593"><a class="pf-value"
+                                href="/cat/cartuchos-de-tinta/ricoh-cartuchos-de-tinta/"
+                                data-val="ricoh-cartuchos-de-tinta" data-title="Ricoh">Ricoh</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="cat-item cat-item-42"><a class="pf-value" href="/cat/impresoras/"
+                            data-val="impresoras" data-title="Impresoras">Impresoras</a>
+                          <ul class="children">
+                            <li class="cat-item cat-item-2309"><a class="pf-value"
+                                href="/cat/impresoras/brother-impresoras/" data-val="brother-impresoras"
+                                data-title="Brother">Brother</a>
+                            </li>
+                            <li class="cat-item cat-item-2306"><a class="pf-value"
+                                href="/cat/impresoras/canon-impresoras/" data-val="canon-impresoras"
+                                data-title="Canon">Canon</a>
+                            </li>
+                            <li class="cat-item cat-item-13237"><a class="pf-value"
+                                href="/cat/impresoras/epson-impresoras/" data-val="epson-impresoras"
+                                data-title="Epson">Epson</a>
+                            </li>
+                            <li class="cat-item cat-item-2304"><a class="pf-value" href="/cat/impresoras/hp-impresoras/"
+                                data-val="hp-impresoras" data-title="HP">HP</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="cat-item cat-item-39"><a class="pf-value" href="/cat/informatica/"
+                            data-val="informatica" data-title="Informática">Informática</a>
+                          <ul class="children">
+                            <li class="cat-item cat-item-13948"><a class="pf-value"
+                                href="/cat/informatica/almacenamiento/" data-val="almacenamiento"
+                                data-title="Almacenamiento">Almacenamiento</a>
+                              <ul class="children">
+                                <li class="cat-item cat-item-13480"><a class="pf-value"
+                                    href="/cat/informatica/almacenamiento/cd-dvd/" data-val="cd-dvd"
+                                    data-title="CD/DVD">CD/DVD</a>
                                 </li>
-                                <li class="arrow"> <a href="#"> <img src="/assets/img\menu-icon\2.jpg" alt=""> Electronics</a>
-                                    <!-- category mega menu start -->
-                                    <div class="c-mega-menu">
-                                        <div class="block">
-                                            <span>
-                                                <a href="#">Laptops </a>
-                                                <a href="#">Dell Laptops</a>
-                                                <a href="#">HP Laptops</a>
-                                                <a href="#">Lenovo Laptops</a>
-                                                <a href="#">Apple Laptops</a>
-                                            </span>
-                                            <span>
-                                                <a href="#">Camera </a>
-                                                <a href="#">Digital Cameras</a>
-                                                <a href="#">Camcorders</a>
-                                                <a href="#">Photo Accessories</a>
-                                                <a href="#">Memory Cards</a>
-                                            </span> 
-                                            <span>
-                                                <a href="#">Smart Phone</a>
-                                                <a href="#">Apple Phones</a>
-                                                <a href="#">Samsung Phones </a>
-                                                <a href="#">Motorola Phones</a>
-                                                <a href="#">Lenovo Phones</a>
-                                            </span> 
-                                            <span>
-                                                <a href="#">Television</a>
-                                                <a href="#">All-in-One Computers</a>
-                                                <a href="#">Towers Only</a>
-                                                <a href="#">Refurbished Desktops</a>
-                                                <a href="#">Gaming Desktops</a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <!-- category mega menu end -->
+                                <li class="cat-item cat-item-13917"><a class="pf-value"
+                                    href="/cat/informatica/almacenamiento/discos-duros-externos/"
+                                    data-val="discos-duros-externos" data-title="Discos Duros Externos">Discos Duros
+                                    Externos</a>
                                 </li>
-                                <li class="arrow"> <a href="#"> <img src="/assets/img\menu-icon\3.jpg" alt=""> Furnitured & Decor</a>
-                                    <!-- category mega menu start -->
-                                    <div class="c-mega-menu item-3">
-                                        <div class="block">
-                                            <span>
-                                                <a href="#">Chair </a>
-                                                <a href="#">Dining room</a>
-                                                <a href="#">bedroom</a>
-                                                <a href="#">Home & Office</a>
-                                                <a href="#">living room</a>
-                                            </span>
-                                            <span>
-                                                <a href="#">Lighting </a>
-                                                <a href="#">Ceiling Lighting</a>
-                                                <a href="#">Wall Lighting</a>
-                                                <a href="#">Outdoor Lighting</a>
-                                                <a href="#">Smart Lighting</a>
-                                            </span> 
-                                            <span>
-                                                <a href="#">Sofa</a>
-                                                <a href="#">Fabric Sofas</a>
-                                                <a href="#">Leather Sofas </a>
-                                                <a href="#">Corner Sofas</a>
-                                                <a href="#">Sofa Beds</a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <!-- category mega menu end -->
+                                <li class="cat-item cat-item-13486"><a class="pf-value"
+                                    href="/cat/informatica/almacenamiento/memorias-usb-pendrives/"
+                                    data-val="memorias-usb-pendrives" data-title="Memorias USB/Pendrives">Memorias
+                                    USB/Pendrives</a>
                                 </li>
-                                <li class="arrow"> <a href="#"> <img src="/assets/img\menu-icon\4.jpg" alt="">Accessories</a>
-                                    <!-- category sub menu start -->
-                                    <ul class="c-sub-menu">
-                                        <li> <a href="#">Bags & Belts</a> </li>
-                                        <li> <a href="#">Sunglasses & Readers</a> </li>
-                                        <li> <a href="#">Socks & Tights</a> </li>
-                                        <li> <a href="#">Scarves & Gloves</a> </li>
-                                    </ul>
-                                    <!-- category sub menu end -->
+                                <li class="cat-item cat-item-13918"><a class="pf-value"
+                                    href="/cat/informatica/almacenamiento/tarjetas-de-memoria/"
+                                    data-val="tarjetas-de-memoria" data-title="Tarjetas de memoria">Tarjetas de
+                                    memoria</a>
                                 </li>
-                                <li> <a href="#"> <img src="/assets/img\menu-icon\5.jpg" alt=""> Jewelry & Watches</a> </li>
-                                <li> <a href="#"> <img src="/assets/img\menu-icon\6.jpg" alt=""> Health & Beauty</a> </li>
-                                <li> <a href="#"> <img src="/assets/img\menu-icon\7.jpg" alt=""> Books & Office</a> </li>
-                                <li> <a href="#"> <img src="/assets/img\menu-icon\8.jpg" alt=""> Sport & Outdoor</a> </li>
-                                <li> <a href="#"> <img src="/assets/img\menu-icon\9.jpg" alt=""> Smart phone & Tablets</a> </li>
-                                <li class="more-catagory"> <a href="#"> <i class="zmdi zmdi-plus-circle"></i> More Catagories</a> </li>
-                                <li class="more-catagory-item"> <a href="#"> <img src="/assets/img\menu-icon\10.jpg" alt=""> Computer - Laptop</a> </li>
-                                <li class="less-catagory"> <a href="#"> <i class="zmdi zmdi-minus-circle"></i> Less Catagories</a> </li>
-                            </ul>
-                        </div>
+                              </ul>
+                            </li>
+                            <li class="cat-item cat-item-13922"><a class="pf-value" href="/cat/informatica/cables/"
+                                data-val="cables" data-title="Cables">Cables</a>
+                              <ul class="children">
+                                <li class="cat-item cat-item-13950"><a class="pf-value"
+                                    href="/cat/informatica/cables/cables-de-alimentacion/"
+                                    data-val="cables-de-alimentacion" data-title="Cables de alimentación">Cables de
+                                    alimentación</a>
+                                </li>
+                                <li class="cat-item cat-item-13949"><a class="pf-value"
+                                    href="/cat/informatica/cables/cables-de-impresora/" data-val="cables-de-impresora"
+                                    data-title="Cables de impresora">Cables de
+                                    impresora</a>
+                                </li>
+                                <li class="cat-item cat-item-13927"><a class="pf-value"
+                                    href="/cat/informatica/cables/regletas/" data-val="regletas"
+                                    data-title="Regletas">Regletas</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="cat-item cat-item-13967"><a class="pf-value"
+                                href="/cat/informatica/componentes-integracion/" data-val="componentes-integracion"
+                                data-title="Componentes">Componentes</a>
+                              <ul class="children">
+                                <li class="cat-item cat-item-13968"><a class="pf-value"
+                                    href="/cat/informatica/componentes-integracion/adaptadores-de-discos-duros/"
+                                    data-val="adaptadores-de-discos-duros"
+                                    data-title="Adaptadores de Discos Duros">Adaptadores de Discos Duros</a>
+                                </li>
+                                <li class="cat-item cat-item-13969"><a class="pf-value"
+                                    href="/cat/informatica/componentes-integracion/cajas-torres-componentes-integracion/"
+                                    data-val="cajas-torres-componentes-integracion" data-title="Cajas / Torres">Cajas /
+                                    Torres</a>
+                                </li>
+                                <li class="cat-item cat-item-13971"><a class="pf-value"
+                                    href="/cat/informatica/componentes-integracion/discos-duros-ssd/"
+                                    data-val="discos-duros-ssd" data-title="Discos Duros SSD">Discos Duros SSD</a>
+                                </li>
+                                <li class="cat-item cat-item-13972"><a class="pf-value"
+                                    href="/cat/informatica/componentes-integracion/fuentes-de-alimentacion/"
+                                    data-val="fuentes-de-alimentacion" data-title="Fuentes de alimentación">Fuentes de
+                                    alimentación</a>
+                                </li>
+                                <li class="cat-item cat-item-13973"><a class="pf-value"
+                                    href="/cat/informatica/componentes-integracion/grabadoras-dvd-blu-ray/"
+                                    data-val="grabadoras-dvd-blu-ray" data-title="Grabadoras DVD/Blu-Ray">Grabadoras
+                                    DVD/Blu-Ray</a>
+                                </li>
+                                <li class="cat-item cat-item-13974"><a class="pf-value"
+                                    href="/cat/informatica/componentes-integracion/memorias-ram/"
+                                    data-val="memorias-ram" data-title="Memorias RAM">Memorias RAM</a>
+                                </li>
+                                <li class="cat-item cat-item-13975"><a class="pf-value"
+                                    href="/cat/informatica/componentes-integracion/pasta-termica/"
+                                    data-val="pasta-termica" data-title="Pasta térmica">Pasta térmica</a>
+                                </li>
+                                <li class="cat-item cat-item-13976"><a class="pf-value"
+                                    href="/cat/informatica/componentes-integracion/procesadores/"
+                                    data-val="procesadores" data-title="Procesadores">Procesadores</a>
+                                </li>
+                                <li class="cat-item cat-item-13977"><a class="pf-value"
+                                    href="/cat/informatica/componentes-integracion/tarjetas-de-sonido/"
+                                    data-val="tarjetas-de-sonido" data-title="Tarjetas de sonido">Tarjetas de sonido</a>
+                                </li>
+                                <li class="cat-item cat-item-13978"><a class="pf-value"
+                                    href="/cat/informatica/componentes-integracion/tarjetas-graficas/"
+                                    data-val="tarjetas-graficas" data-title="Tarjetas gráficas">Tarjetas gráficas</a>
+                                </li>
+                                <li class="cat-item cat-item-13979"><a class="pf-value"
+                                    href="/cat/informatica/componentes-integracion/tarjetas-pci/"
+                                    data-val="tarjetas-pci" data-title="Tarjetas PCI">Tarjetas PCI</a>
+                                </li>
+                                <li class="cat-item cat-item-13980"><a class="pf-value"
+                                    href="/cat/informatica/componentes-integracion/ventilacion-refrigeracion/"
+                                    data-val="ventilacion-refrigeracion"
+                                    data-title="Ventilación/Refrigeración">Ventilación/Refrigeración</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="cat-item cat-item-14007"><a class="pf-value" href="/cat/informatica/escaneres/"
+                                data-val="escaneres" data-title="Escáneres">Escáneres</a>
+                            </li>
+                            <li class="cat-item cat-item-13888"><a class="pf-value" href="/cat/informatica/gaming/"
+                                data-val="gaming" data-title="Gaming">Gaming</a>
+                              <ul class="children">
+                                <li class="cat-item cat-item-13892"><a class="pf-value"
+                                    href="/cat/informatica/gaming/cajas-torres/" data-val="cajas-torres"
+                                    data-title="Cajas/Torres">Cajas/Torres</a>
+                                </li>
+                                <li class="cat-item cat-item-13944"><a class="pf-value"
+                                    href="/cat/informatica/gaming/mandos-gamepads/" data-val="mandos-gamepads"
+                                    data-title="Mandos/Gamepads">Mandos/Gamepads</a>
+                                </li>
+                                <li class="cat-item cat-item-13942"><a class="pf-value"
+                                    href="/cat/informatica/gaming/mesas-gaming/" data-val="mesas-gaming"
+                                    data-title="Mesas Gaming">Mesas Gaming</a>
+                                </li>
+                                <li class="cat-item cat-item-13894"><a class="pf-value"
+                                    href="/cat/informatica/gaming/packs-gaming/" data-val="packs-gaming"
+                                    data-title="Packs Gaming">Packs Gaming</a>
+                                </li>
+                                <li class="cat-item cat-item-13240"><a class="pf-value"
+                                    href="/cat/informatica/gaming/sillas-gaming/" data-val="sillas-gaming"
+                                    data-title="Sillas Gaming">Sillas Gaming</a>
+                                </li>
+                                <li class="cat-item cat-item-13893"><a class="pf-value"
+                                    href="/cat/informatica/gaming/teclados-gaming/" data-val="teclados-gaming"
+                                    data-title="Teclados Gaming">Teclados Gaming</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="cat-item cat-item-13947"><a class="pf-value" href="/cat/informatica/perifericos/"
+                                data-val="perifericos" data-title="Periféricos">Periféricos</a>
+                              <ul class="children">
+                                <li class="cat-item cat-item-13890"><a class="pf-value"
+                                    href="/cat/informatica/perifericos/alfombrilllas/" data-val="alfombrilllas"
+                                    data-title="Alfombrillas">Alfombrillas</a>
+                                </li>
+                                <li class="cat-item cat-item-13253"><a class="pf-value"
+                                    href="/cat/informatica/perifericos/auriculares/" data-val="auriculares"
+                                    data-title="Auriculares">Auriculares</a>
+                                </li>
+                                <li class="cat-item cat-item-13891"><a class="pf-value"
+                                    href="/cat/informatica/perifericos/microfonos/" data-val="microfonos"
+                                    data-title="Micrófonos">Micrófonos</a>
+                                </li>
+                                <li class="cat-item cat-item-13247"><a class="pf-value"
+                                    href="/cat/informatica/perifericos/ratones/" data-val="ratones"
+                                    data-title="Ratones">Ratones</a>
+                                </li>
+                                <li class="cat-item cat-item-13252"><a class="pf-value"
+                                    href="/cat/informatica/perifericos/teclados/" data-val="teclados"
+                                    data-title="Teclados">Teclados</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="cat-item cat-item-13895"><a class="pf-value"
+                                href="/cat/informatica/redes-conectividad/" data-val="redes-conectividad"
+                                data-title="Redes/Conectividad">Redes/Conectividad</a>
+                              <ul class="children">
+                                <li class="cat-item cat-item-13897"><a class="pf-value"
+                                    href="/cat/informatica/redes-conectividad/adaptadores-plc/"
+                                    data-val="adaptadores-plc" data-title="Adaptadores PLC">Adaptadores PLC</a>
+                                </li>
+                                <li class="cat-item cat-item-13896"><a class="pf-value"
+                                    href="/cat/informatica/redes-conectividad/repetidores-amplificadores-de-red/"
+                                    data-val="repetidores-amplificadores-de-red"
+                                    data-title="Repetidores/Amplificadores de red">Repetidores/Amplificadores de red</a>
+                                </li>
+                                <li class="cat-item cat-item-13938"><a class="pf-value"
+                                    href="/cat/informatica/redes-conectividad/switchs/" data-val="switchs"
+                                    data-title="Switchs">Switchs</a>
+                                </li>
+                                <li class="cat-item cat-item-13898"><a class="pf-value"
+                                    href="/cat/informatica/redes-conectividad/tarjetas-de-red/"
+                                    data-val="tarjetas-de-red" data-title="Tarjetas de red">Tarjetas de red</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="cat-item cat-item-13899"><a class="pf-value"
+                                href="/cat/informatica/soportes-para-tv/" data-val="soportes-para-tv"
+                                data-title="Soportes para TV">Soportes para TV</a>
+                            </li>
+                            <li class="cat-item cat-item-13940"><a class="pf-value" href="/cat/informatica/tablets/"
+                                data-val="tablets" data-title="Tablets">Tablets</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="cat-item cat-item-13589"><a class="pf-value" href="/cat/covid-19/"
+                            data-val="covid-19" data-title="Limpieza y desinfección">Limpieza y desinfección</a>
+                          <ul class="children">
+                            <li class="cat-item cat-item-14000"><a class="pf-value"
+                                href="/cat/covid-19/gel-hidroalcoholico/" data-val="gel-hidroalcoholico"
+                                data-title="Gel hidroalcohólico">Gel hidroalcohólico</a>
+                            </li>
+                            <li class="cat-item cat-item-14001"><a class="pf-value" href="/cat/covid-19/mascarillas/"
+                                data-val="mascarillas" data-title="Mascarillas">Mascarillas</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="cat-item cat-item-13951"><a class="pf-value" href="/cat/movilidad-smartphones/"
+                            data-val="movilidad-smartphones"
+                            data-title="Movilidad/Smartphones">Movilidad/Smartphones</a>
+                          <ul class="children">
+                            <li class="cat-item cat-item-13952"><a class="pf-value"
+                                href="/cat/movilidad-smartphones/accesorios-para-smartphones/"
+                                data-val="accesorios-para-smartphones"
+                                data-title="Accesorios para smartphones">Accesorios para smartphones</a>
+                              <ul class="children">
+                                <li class="cat-item cat-item-13960"><a class="pf-value"
+                                    href="/cat/movilidad-smartphones/accesorios-para-smartphones/cargadores-para-smartphones/"
+                                    data-val="cargadores-para-smartphones"
+                                    data-title="Cargadores para smartphones">Cargadores para smartphones</a>
+                                </li>
+                                <li class="cat-item cat-item-13961"><a class="pf-value"
+                                    href="/cat/movilidad-smartphones/accesorios-para-smartphones/powerbanks-baterias/"
+                                    data-val="powerbanks-baterias"
+                                    data-title="Powerbanks/Baterías">Powerbanks/Baterías</a>
+                                </li>
+                                <li class="cat-item cat-item-13962"><a class="pf-value"
+                                    href="/cat/movilidad-smartphones/accesorios-para-smartphones/soportes-para-smartphones/"
+                                    data-val="soportes-para-smartphones" data-title="Soportes para smartphones">Soportes
+                                    para smartphones</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="cat-item cat-item-13953"><a class="pf-value"
+                                href="/cat/movilidad-smartphones/smartphones/" data-val="smartphones"
+                                data-title="Smartphones">Smartphones</a>
+                            </li>
+                            <li class="cat-item cat-item-13954"><a class="pf-value"
+                                href="/cat/movilidad-smartphones/telefonia-fija/" data-val="telefonia-fija"
+                                data-title="Telefonía fija">Telefonía fija</a>
+                            </li>
+                            <li class="cat-item cat-item-13955"><a class="pf-value"
+                                href="/cat/movilidad-smartphones/wearables/" data-val="wearables"
+                                data-title="Wearables">Wearables</a>
+                              <ul class="children">
+                                <li class="cat-item cat-item-13244"><a class="pf-value"
+                                    href="/cat/movilidad-smartphones/wearables/pulseras-de-actividad/"
+                                    data-val="pulseras-de-actividad" data-title="Pulseras de actividad">Pulseras de
+                                    actividad</a>
+                                </li>
+                                <li class="cat-item cat-item-13956"><a class="pf-value"
+                                    href="/cat/movilidad-smartphones/wearables/relojes-smartwatches/"
+                                    data-val="relojes-smartwatches" data-title="Relojes Smartwatches">Relojes
+                                    Smartwatches</a>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="cat-item cat-item-40"><a class="pf-value" href="/cat/papeleria/" data-val="papeleria"
+                            data-title="Papelería">Papelería</a>
+                          <ul class="children">
+                            <li class="cat-item cat-item-13945"><a class="pf-value"
+                                href="/cat/papeleria/archivo-y-clasificacion/" data-val="archivo-y-clasificacion"
+                                data-title="Archivo y clasificación">Archivo y
+                                clasificación</a>
+                              <ul class="children">
+                                <li class="cat-item cat-item-13901"><a class="pf-value"
+                                    href="/cat/papeleria/archivo-y-clasificacion/archivadores/" data-val="archivadores"
+                                    data-title="Archivadores">Archivadores</a>
+                                </li>
+                                <li class="cat-item cat-item-13902"><a class="pf-value"
+                                    href="/cat/papeleria/archivo-y-clasificacion/bandejas-de-sobremesa/"
+                                    data-val="bandejas-de-sobremesa" data-title="Bandejas de sobremesa">Bandejas de
+                                    sobremesa</a>
+                                </li>
+                                <li class="cat-item cat-item-13903"><a class="pf-value"
+                                    href="/cat/papeleria/archivo-y-clasificacion/cajas-de-archivo-definitivo/"
+                                    data-val="cajas-de-archivo-definitivo"
+                                    data-title="Cajas de archivo definitivo">Cajas de archivo definitivo</a>
+                                </li>
+                                <li class="cat-item cat-item-13904"><a class="pf-value"
+                                    href="/cat/papeleria/archivo-y-clasificacion/clasificadores-de-archivo/"
+                                    data-val="clasificadores-de-archivo"
+                                    data-title="Clasificadores de archivo">Clasificadores de archivo</a>
+                                </li>
+                                <li class="cat-item cat-item-13905"><a class="pf-value"
+                                    href="/cat/papeleria/archivo-y-clasificacion/contenedores-de-archivo/"
+                                    data-val="contenedores-de-archivo" data-title="Contenedores de archivo">Contenedores
+                                    de archivo</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="cat-item cat-item-14002"><a class="pf-value"
+                                href="/cat/papeleria/dibujar-pintar-y-colorear/" data-val="dibujar-pintar-y-colorear"
+                                data-title="Dibujar, pintar y colorear">Dibujar,
+                                pintar y colorear</a>
+                              <ul class="children">
+                                <li class="cat-item cat-item-14003"><a class="pf-value"
+                                    href="/cat/papeleria/dibujar-pintar-y-colorear/acuarelas/" data-val="acuarelas"
+                                    data-title="Acuarelas">Acuarelas</a>
+                                </li>
+                                <li class="cat-item cat-item-14006"><a class="pf-value"
+                                    href="/cat/papeleria/dibujar-pintar-y-colorear/ceras-de-colores/"
+                                    data-val="ceras-de-colores" data-title="Ceras de colores">Ceras de colores</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="cat-item cat-item-3118"><a class="pf-value" href="/cat/papeleria/escritura/"
+                                data-val="escritura" data-title="Escritura y corrección">Escritura y corrección</a>
+                              <ul class="children">
+                                <li class="cat-item cat-item-13986"><a class="pf-value"
+                                    href="/cat/papeleria/escritura/boligrafos/" data-val="boligrafos"
+                                    data-title="Bolígrafos">Bolígrafos</a>
+                                </li>
+                                <li class="cat-item cat-item-13987"><a class="pf-value"
+                                    href="/cat/papeleria/escritura/correctores-y-gomas-de-borrar/"
+                                    data-val="correctores-y-gomas-de-borrar"
+                                    data-title="Correctores y gomas de borrar">Correctores y gomas de borrar</a>
+                                  <ul class="children">
+                                    <li class="cat-item cat-item-13988"><a class="pf-value"
+                                        href="/cat/papeleria/escritura/correctores-y-gomas-de-borrar/correctores/"
+                                        data-val="correctores" data-title="Correctores">Correctores</a>
+                                    </li>
+                                    <li class="cat-item cat-item-13989"><a class="pf-value"
+                                        href="/cat/papeleria/escritura/correctores-y-gomas-de-borrar/gomas-de-borrar/"
+                                        data-val="gomas-de-borrar" data-title="Gomas de borrar">Gomas de borrar</a>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="cat-item cat-item-13946"><a class="pf-value"
+                                href="/cat/papeleria/maquinas-de-oficina/" data-val="maquinas-de-oficina"
+                                data-title="Máquinas de oficina">Máquinas de oficina</a>
+                              <ul class="children">
+                                <li class="cat-item cat-item-13931"><a class="pf-value"
+                                    href="/cat/papeleria/maquinas-de-oficina/calculadoras/" data-val="calculadoras"
+                                    data-title="Calculadoras">Calculadoras</a>
+                                </li>
+                                <li class="cat-item cat-item-13929"><a class="pf-value"
+                                    href="/cat/papeleria/maquinas-de-oficina/destructoras-de-papel/"
+                                    data-val="destructoras-de-papel" data-title="Destructoras de papel">Destructoras de
+                                    papel</a>
+                                </li>
+                                <li class="cat-item cat-item-13998"><a class="pf-value"
+                                    href="/cat/papeleria/maquinas-de-oficina/impresoras-de-etiquetas-y-de-recibos/"
+                                    data-val="impresoras-de-etiquetas-y-de-recibos"
+                                    data-title="Impresoras de etiquetas y de recibos">Impresoras de etiquetas y de
+                                    recibos</a>
+                                </li>
+                                <li class="cat-item cat-item-13997"><a class="pf-value"
+                                    href="/cat/papeleria/maquinas-de-oficina/rotuladoras/" data-val="rotuladoras"
+                                    data-title="Rotuladoras">Rotuladoras</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="cat-item cat-item-13991"><a class="pf-value"
+                                href="/cat/papeleria/material-de-oficina/" data-val="material-de-oficina"
+                                data-title="Material de oficina">Material de oficina</a>
+                              <ul class="children">
+                                <li class="cat-item cat-item-13992"><a class="pf-value"
+                                    href="/cat/papeleria/material-de-oficina/cintas-y-adhesivos/"
+                                    data-val="cintas-y-adhesivos" data-title="Cintas y adhesivos">Cintas y adhesivos</a>
+                                </li>
+                                <li class="cat-item cat-item-13993"><a class="pf-value"
+                                    href="/cat/papeleria/material-de-oficina/clips-y-gomas-elasticas/"
+                                    data-val="clips-y-gomas-elasticas" data-title="Clips y gomas elásticas">Clips y
+                                    gomas elásticas</a>
+                                  <ul class="children">
+                                    <li class="cat-item cat-item-13994"><a class="pf-value"
+                                        href="/cat/papeleria/material-de-oficina/clips-y-gomas-elasticas/clips/"
+                                        data-val="clips" data-title="Clips">Clips</a>
+                                    </li>
+                                    <li class="cat-item cat-item-13995"><a class="pf-value"
+                                        href="/cat/papeleria/material-de-oficina/clips-y-gomas-elasticas/gomas-elasticas/"
+                                        data-val="gomas-elasticas" data-title="Gomas elásticas">Gomas elásticas</a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li class="cat-item cat-item-2380"><a class="pf-value"
+                                    href="/cat/papeleria/material-de-oficina/etiquetas/" data-val="etiquetas"
+                                    data-title="Etiquetas multiusos">Etiquetas multiusos</a>
+                                </li>
+                                <li class="cat-item cat-item-13935"><a class="pf-value"
+                                    href="/cat/papeleria/material-de-oficina/grapadoras-y-grapas/"
+                                    data-val="grapadoras-y-grapas" data-title="Grapadoras y grapas">Grapadoras y
+                                    grapas</a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li class="cat-item cat-item-3101"><a class="pf-value" href="/cat/papeleria/papel/"
+                                data-val="papel" data-title="Papel">Papel</a>
+                              <ul class="children">
+                                <li class="cat-item cat-item-13964"><a class="pf-value"
+                                    href="/cat/papeleria/papel/folios/" data-val="folios" data-title="Folios">Folios</a>
+                                </li>
+                                <li class="cat-item cat-item-3111"><a class="pf-value"
+                                    href="/cat/papeleria/papel/papel-fotografico/" data-val="papel-fotografico"
+                                    data-title="Papel fotográfico">Papel fotográfico</a>
+                                </li>
+                                <li class="cat-item cat-item-13966"><a class="pf-value"
+                                    href="/cat/papeleria/papel/papel-termico/" data-val="papel-termico"
+                                    data-title="Papel térmico">Papel térmico</a>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="cat-item cat-item-41"><a class="pf-value" href="/cat/toner/" data-val="toner"
+                            data-title="Tóner">Tóner</a>
+                          <ul class="children">
+                            <li class="cat-item cat-item-2019"><a class="pf-value" href="/cat/toner/brother-toner/"
+                                data-val="brother-toner" data-title="Brother">Brother</a>
+                            </li>
+                            <li class="cat-item cat-item-13839"><a class="pf-value" href="/cat/toner/canon-toner/"
+                                data-val="canon-toner" data-title="Canon">Canon</a>
+                            </li>
+                            <li class="cat-item cat-item-12438"><a class="pf-value" href="/cat/toner/dell-toner/"
+                                data-val="dell-toner" data-title="Dell">Dell</a>
+                            </li>
+                            <li class="cat-item cat-item-1835"><a class="pf-value" href="/cat/toner/hp-toner/"
+                                data-val="hp-toner" data-title="HP">HP</a>
+                            </li>
+                            <li class="cat-item cat-item-11669"><a class="pf-value" href="/cat/toner/ricoh/"
+                                data-val="ricoh" data-title="Ricoh">Ricoh</a>
+                            </li>
+                            <li class="cat-item cat-item-2169"><a class="pf-value" href="/cat/toner/samsung/"
+                                data-val="samsung" data-title="Samsung">Samsung</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <div class="woodmart-scroll-pane" style="display: none;">
+                        <div class="woodmart-scroll-slider" style="height: 20px; transform: translate(0px, 0px);"></div>
+                      </div>
                     </div>
-                    <!-- category menu end -->
+                  </div>
                 </div>
-                <div class="col-md-9 text-right">
-                    <div class="mainmenu hidden-xs">
-                        <ul>
-                            <li><a  [routerLink]="['/cartucheayahorra']">Programa «CARTUCHEA Y AHORRA»</a></li>
-                            <li><a  [routerLink]="['/sobre-cartuchea']">Sobre Cartuchea</a></li>
-                            <li><a  [routerLink]="['/blog']">Blog</a></li>
+                <button type="submit" class="searchsubmit">
+                  Search </button>
+              </form>
+              <div class="search-results-wrapper">
+                <div class="woodmart-scroll has-scrollbar">
+                  <div class="woodmart-search-results woodmart-scroll-content" tabindex="0"
+                    style="margin-right: -17px;">
+                    <div class="autocomplete-suggestions"
+                      style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div>
+                  </div>
+                  <div class="woodmart-scroll-pane" style="display: none;">
+                    <div class="woodmart-scroll-slider" style="height: 20px; transform: translate(0px, 0px);"></div>
+                  </div>
+                </div>
+                <div class="woodmart-search-loader wd-fill"></div>
+              </div>
+            </div>
+            <div class="whb-space-element " style="width:10px;"></div>
+            <div id="wd-6557a58226260" class="woodmart-button-wrapper text-left"><a [routerLink]="['/buscador-de-impresoras']"
+                title=""
+                class="btn btn-color-alt btn-style-default btn-shape-rectangle btn-size-large boton-buscador">Buscador
+                de Impresoras</a></div>
+          </div>
+          <div class="whb-column whb-col-right whb-visible-lg">
+            <div
+              class="woodmart-header-links woodmart-navigation menu-simple-dropdown wd-tools-element item-event-hover  my-account-with-icon"
+              title="Mi cuenta">
+              <a [routerLink]="['/mi-cuenta']">
+                <span class="ri-user-line">
+                </span>
+                <span class="wd-tools-text">
+                  Acceder / Registrarme </span>
+              </a>
+
+
+              <div class="sub-menu-dropdown menu-item-register color-scheme-dark">
+                <div class="login-dropdown-inner">
+                  <h3 class="login-title"><span>Acceder</span><a class="create-account-link"
+                      [routerLink]="['/mi-cuenta']">Crear una cuenta</a></h3>
+                  <form method="post" class="login woocommerce-form woocommerce-form-login " action="/mi-cuenta/">
+
+
+
+                    <p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide form-row-username">
+                      <label for="username">Nombre de usuario o correo electrónico&nbsp;<span
+                          class="required">*</span></label>
+                      <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username"
+                        id="username" autocomplete="username" value="">
+                    </p>
+                    <p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide form-row-password">
+                      <label for="password">Contraseña&nbsp;<span class="required">*</span></label>
+                      <input class="woocommerce-Input woocommerce-Input--text input-text" type="password"
+                        name="password" id="password" autocomplete="current-password">
+                    </p>
+
+
+                    <p class="form-row">
+                      <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce"
+                        value="e96413b08b"><input type="hidden" name="_wp_http_referer" value="/"> <button type="submit"
+                        class="button woocommerce-button woocommerce-form-login__submit" name="login"
+                        value="Entrar">Entrar</button>
+                    </p>
+
+                    <div class="login-form-footer">
+                      <a href="/mi-cuenta/lost-password/" class="woocommerce-LostPassword lost_password">¿No recuerdas
+                        tu contraseña?</a>
+                      <label
+                        class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
+                        <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme"
+                          type="checkbox" value="forever"> <span>Recordarme</span>
+                      </label>
+                    </div>
+
+
+
+                  </form>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="woodmart-wishlist-info-widget wd-tools-element wd-style-icon with-product-count"
+              title="Mis Favoritos">
+              <a [routerLink]="['/favoritos']">
+                <span class="ri-heart-line">
+
+                  <span class="custom-wishlist-count">
+                    0 </span>
+                </span>
+                <span class="wishlist-label wd-tools-text">
+                  Favoritos </span>
+              </a>
+            </div>
+
+            <div
+              class="woodmart-shopping-cart wd-tools-element woodmart-cart-design-2 woodmart-cart-alt cart-widget-opener"
+              title="Carrito">
+              <a type="button" data-bs-toggle="offcanvas" data-bs-target="#cartoffcanvas">
+                <span class="ri-shopping-cart-2-line">
+
+                  <span class="custom-cart-count">{{totalItems}} </span>
+                </span>
+                <span class="woodmart-cart-totals wd-tools-text">
+
+                  <span class="subtotal-divider">/</span>
+                  <span class="woodmart-cart-subtotal"><span class="woocommerce-Price-amount amount">{{grandTotal | number: '1.2-2': 'es' }}&nbsp;<span
+                        class="woocommerce-Price-currencySymbol">€</span></span></span>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="whb-column whb-mobile-left whb-hidden-lg">
+            <div class="site-logo">
+              <div class="woodmart-logo-wrap switch-logo-enable">
+                <a [routerLink]="['/']" class="woodmart-logo woodmart-main-logo" rel="home">
+                  <img src="/assets/images/logo_cartuchea.png" alt="Cartuchea" style="max-width: 179px;"> </a>
+                <a  [routerLink]="['/']" class="woodmart-logo woodmart-sticky-logo" rel="home">
+                  <img src="/assets/images/logo_cartuchea.png" alt="Cartuchea" style="max-width: 179px;"> </a>
+              </div>
+            </div>
+          </div>
+          <div class="whb-column whb-mobile-center whb-hidden-lg whb-empty-column">
+          </div>
+          <div class="whb-column whb-mobile-right whb-hidden-lg">
+
+            <div class="woodmart-wishlist-info-widget wd-tools-element wd-style-icon with-product-count"
+              title="Mis Favoritos">
+              <a  [routerLink]="['/favoritos']">
+                <span class="wishlist-icon wd-tools-icon">
+                  <i class="ri-heart-line"></i>
+                  <span class="wishlist-count wd-tools-count">
+                    0 </span>
+                </span>
+                <span class="wishlist-label wd-tools-text">
+                  Favoritos </span>
+              </a>
+            </div>
+            <div
+              class="woodmart-header-links woodmart-navigation menu-simple-dropdown wd-tools-element item-event-hover  my-account-with-icon"
+              title="Mi cuenta">
+              <a [routerLink]="['/mi-cuenta']">
+                <span class="ri-user-line">
+                </span>
+                <span class="wd-tools-text">
+                  Acceder / Registrarme </span>
+              </a>
+
+
+              <div class="sub-menu-dropdown menu-item-register color-scheme-dark">
+                <div class="login-dropdown-inner">
+                  <h3 class="login-title"><span>Acceder</span><a class="create-account-link"
+                     [routerLink]="['/mi-cuenta/?action=register']">Crear una cuenta</a></h3>
+                  <form method="post" class="login woocommerce-form woocommerce-form-login " action="/mi-cuenta/">
+
+
+
+                    <p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide form-row-username">
+                      <label for="username">Nombre de usuario o correo electrónico&nbsp;<span
+                          class="required">*</span></label>
+                      <input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username"
+                        id="username" autocomplete="username" value="">
+                    </p>
+                    <p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide form-row-password">
+                      <label for="password">Contraseña&nbsp;<span class="required">*</span></label>
+                      <input class="woocommerce-Input woocommerce-Input--text input-text" type="password"
+                        name="password" id="password" autocomplete="current-password">
+                    </p>
+
+
+                    <p class="form-row">
+                      <input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce"
+                        value="e96413b08b"><input type="hidden" name="_wp_http_referer" value="/"> <button type="submit"
+                        class="button woocommerce-button woocommerce-form-login__submit" name="login"
+                        value="Entrar">Entrar</button>
+                    </p>
+
+                    <div class="login-form-footer">
+                      <a [routerLink]="['/mi-cuenta/lost-password/']" class="woocommerce-LostPassword lost_password">¿No recuerdas
+                        tu contraseña?</a>
+                      <label
+                        class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
+                        <input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme"
+                          type="checkbox" value="forever"> <span>Recordarme</span>
+                      </label>
+                    </div>
+
+
+
+                  </form>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="woodmart-shopping-cart wd-tools-element woodmart-cart-design-5 woodmart-cart-alt cart-widget-opener"
+              title="Carrito">
+              <a data-bs-target="#cartoffcanvas" data-bs-toggle="offcanvas">
+                <span class="ri-shopping-cart-2-line">
+
+                  <span class="woodmart-cart-number">0 <span>items</span></span>
+                </span>
+                <span class="woodmart-cart-totals wd-tools-text">
+
+                  <span class="subtotal-divider">/</span>
+                  <span class="woodmart-cart-subtotal"><span class="woocommerce-Price-amount amount">0,00&nbsp;<span
+                        class="woocommerce-Price-currencySymbol">000€</span></span></span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="whb-row whb-header-bottom whb-not-sticky-row whb-without-bg whb-border-fullwidth whb-color-dark whb-flex-flex-middle">
+      <div class="container">
+        <div class="whb-flex-row whb-header-bottom-inner">
+          <div class="whb-column whb-col-left whb-visible-lg">
+            <div
+              class="whb-navigation whb-primary-menu main-nav site-navigation woodmart-navigation menu-left navigation-style-default"
+              role="navigation">
+              <div class="menu-menu-principal-container">
+                <!-- Mega Menu Start-->
+
+                <div class="dropdown">
+                  <a class="btn btn-primary dropdown-toggle btn-green" data-bs-toggle="dropdown">
+
+                    <div
+                      class="woodmart-burger-icon wd-tools-element mobile-nav-icon whb-mobile-nav-icon wd-style-icon">
+                      <span class="woodmart-burger wd-tools-icon"></span>
+                    </div>
+                    <span class="woodmart-burger-label wd-tools-text p-1 ">PROGRAMA «CARTUCHEA Y AHORRA»</span>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li class="border-bottom dropdown-item"><a class="nav-link p-3" href="#">Link 3</a></li>
+                    <li class="dropdown-item">
+                      <a href="apps-chat.html" class="nav-link  p-3" data-key="t-chat"> Chat </a>
+                    </li>
+                    <li class="dropdown-item border-bottom">
+                      <a href="#sidebarEmail" class="nav-link collapsed p-3" data-bs-toggle="collapse" role="button"
+                        aria-expanded="false" aria-controls="sidebarEmail" data-key="t-email">
+                        Email
+                      </a>
+                      <div class="collapse menu-dropdown" id="sidebarEmail">
+                        <ul class="nav nav-sm flex-column">
+                          <li class="dropdown-item border-bottom nav-item">
+                            <a href="apps-mailbox.html" class="nav-link  p-3" data-key="t-mailbox"> Mailbox </a>
+                          </li>
+                          <li class="dropdown-item border-bottom nav-item">
+                            <a href="#sidebaremailTemplates" class="nav-link collapsed p-3" data-bs-toggle="collapse"
+                              role="button" aria-expanded="false" aria-controls="sidebaremailTemplates"
+                              data-key="t-email-templates">
+                              Email Templates
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebaremailTemplates">
+                              <ul class="nav nav-sm flex-column">
+                                <li class="dropdown-item border-bottom nav-item">
+                                  <a href="apps-email-basic.html" class="nav-link" data-key="t-basic-action"> Basic
+                                    Action </a>
+                                </li>
+                                <li class="dropdown-item border-bottom nav-item">
+                                  <a href="apps-email-ecommerce.html" class="nav-link" data-key="t-ecommerce-action">
+                                    Ecommerce Action </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
                         </ul>
-                    </div>
-                    <div id="mobileMenu"></div>
+                      </div>
+                    </li>
+                    <li class="dropdown-item border-bottom nav-item">
+                      <a href="#sidebarEcommerce" class="nav-link collapsed p-3" data-bs-toggle="collapse" role="button"
+                        aria-expanded="false" aria-controls="sidebarEcommerce" data-key="t-ecommerce">
+                        Ecommerce
+                      </a>
+                      <div class="collapse menu-dropdown" id="sidebarEcommerce">
+                        <ul class="nav nav-sm flex-column">
+                          <li class="nav-item border-bottom">
+                            <a href="apps-ecommerce-products.html" class="nav-link" data-key="t-products"> Products </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="apps-ecommerce-product-details.html" class="nav-link" data-key="t-product-Details">
+                              Product Details </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="apps-ecommerce-add-product.html" class="nav-link" data-key="t-create-product">
+                              Create Product </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="apps-ecommerce-orders.html" class="nav-link" data-key="t-orders">
+                              Orders </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="apps-ecommerce-order-details.html" class="nav-link" data-key="t-order-details">
+                              Order Details </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="apps-ecommerce-customers.html" class="nav-link" data-key="t-customers"> Customers
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="apps-ecommerce-cart.html" class="nav-link" data-key="t-shopping-cart"> Shopping
+                              Cart </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="apps-ecommerce-checkout.html" class="nav-link" data-key="t-checkout"> Checkout </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="apps-ecommerce-sellers.html" class="nav-link" data-key="t-sellers">
+                              Sellers </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="apps-ecommerce-seller-details.html" class="nav-link" data-key="t-sellers-details">
+                              Seller Details </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+
+
+
+
                 </div>
+                <!-- Mega Menu End-->
+              </div>
+            </div><!--END MAIN-NAV-->
+          </div>
+          <div class="whb-column whb-col-center whb-visible-lg whb-empty-column">
+          </div>
+          <div class="whb-column whb-col-right whb-visible-lg">
+            <div
+              class="whb-navigation whb-secondary-menu site-navigation woodmart-navigation menu-left navigation-style-default"
+              role="navigation">
+              <div class="menu-menu-derecha-container">
+                <ul id="menu-menu-derecha" class="menu">
+                  <li id="menu-item-3339"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3339 item-level-0 menu-item-design-default menu-simple-dropdown item-event-hover">
+                    <a [routerLink]="['/cartucheayahorra']" class="woodmart-nav-link"><span class="nav-link-text">Programa
+                        «CARTUCHEA Y AHORRA»</span></a>
+                  </li>
+                  <li id="menu-item-3290"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3290 item-level-0 menu-item-design-default menu-simple-dropdown item-event-hover">
+                    <a [routerLink]="['/sobre-cartuchea']" class="woodmart-nav-link"><span class="nav-link-text">Sobre
+                        Cartuchea</span></a>
+                  </li>
+                  <li id="menu-item-3227"
+                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3227 item-level-0 menu-item-design-default menu-simple-dropdown item-event-hover">
+                    <a [routerLink]="['/blog']" class="woodmart-nav-link"><span class="nav-link-text">Blog</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div><!--END MAIN-NAV-->
+          </div>
+          <div class="whb-column whb-col-mobile whb-hidden-lg">
+
+            <div class="woodmart-burger-icon wd-tools-element mobile-nav-icon whb-mobile-nav-icon wd-style-icon">
+              <a data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="woodmart-burger wd-tools-icon"></span>
+                <span class="woodmart-burger-label wd-tools-text">Menu</span>
+              </a>
+            </div><!--END MOBILE-NAV-ICON-->
+            <div class="woodmart-search-form">
+              <form role="search" method="get"
+                class="searchform  search-style-with-bg woodmart-ajax-search woodmart-mobile-search-form" action="/"
+                data-thumbnail="1" data-price="1" data-post_type="product" data-count="20" data-sku="0"
+                data-symbols_count="3">
+                <input type="text" class="s" placeholder="Buscar por consumible o impresora..." value="" name="s"
+                  autocomplete="off">
+                <input type="hidden" name="post_type" value="product">
+                <button type="submit" class="searchsubmit">
+                  Search </button>
+              </form>
+              <div class="search-results-wrapper">
+                <div class="woodmart-scroll has-scrollbar">
+                  <div class="woodmart-search-results woodmart-scroll-content" tabindex="0"
+                    style="margin-right: -17px;">
+                    <div class="autocomplete-suggestions"
+                      style="position: absolute; display: none; max-height: 300px; z-index: 9999;"></div>
+                  </div>
+                  <div class="woodmart-scroll-pane" style="display: none;">
+                    <div class="woodmart-scroll-slider" style="height: 20px; transform: translate(0px, 0px);"></div>
+                  </div>
+                </div>
+                <div class="woodmart-search-loader wd-fill"></div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    <!-- header bottom end -->
+  </div>
 
 </header>
 
+<!-- Offcanvas Sidebar -->
+<div class="leftoffcanvas offcanvas offcanvas-start" id="offcanvas">
+  <div class="offcanvas-header p-4 bg-green">
+    <a [routerLink]="['/']" class="woodmart-logo woodmart-sticky-logo" rel="home">
+      <img src="/assets/images/logo_cartuchea.png" alt="Cartuchea" style="max-width: 220px;"> </a>
 
-<div id="cartpanel" class="cartpanel">
-          <div class="card">
-            <div class="card-header">
-                <h4 style="padding: 0px 15px;">Trolly <a href="javascript:void(0)" class="closebtn">&times;</a></h4>
-                <hr/>
-            </div>
-            <div class="card-body">
-                        <div class="cart-row">
-                        <div class="cart-image">
-                            <img src="/assets/img\cart\item1.jpg" alt="" class="img-responsive"> 
-                        </div>
-                        <div class="cart-product-title">
-                            <p>This Product Title This Product TitleThis Product TitleThis</p>
-                            <p>1x <span style="color: #36bd0d;">259.65</span></p>
-                        </div>
-                        <div class="cart-x-icon">
-                           <button>&times;</button>
-                        </div>
-                    </div>
-                  
-                    <div class="cart-row">
-                       <div class="cart-image">
-                            <img src="/assets/img\cart\item2.jpg" alt="" class="img-responsive"> 
-                        </div>
-                        <div class="cart-product-title">
-                            <p>This Product Title This Product TitleThis Product TitleThis</p>
-                            <p>1x <span style="color: #36bd0d;">100.00</span></p>
-                        </div>
-                        <div class="cart-x-icon">
-                           <button>&times;</button>
-                        </div>
-                    </div>
+  </div>
+  <div class="offcanvas-body navbar-menu-front">
+    <ul class="navbar-nav" id="navbar-nav">
 
+      <li class="nav-item border-bottom">
+        <a class="nav-link" [routerLink]="['/']">
+          <i class="ri-layout-3-line"></i> <span data-key="t-dashboards">Inicio</span>
+        </a>
+      </li> <!-- end Dashboard Menu -->
 
-                </div>       
-            <div style="position: fixed;bottom: 0; padding: 15px 30px;" class="cart-row">
-                <hr/>
-
-                <h4>SUBTOTAL (IVA INC.): 359.65</h4>
-              <h2><a class="btn">Ver carrito</a></h2>  
-               <h2> <a class="btn">Finalizar compra</a></h2>
-            </div>   
+      <li class="nav-item border-bottom">
+        <a class="nav-link" [routerLink]="['/']">
+          <i class="ri-layout-3-line"></i> <span data-key="t-dashboards">Programa «CARTUCHEA Y AHORRA»</span>
+        </a>
+      </li>
+      <li class="nav-item border-bottom">
+        <a class="nav-link menu-link" href="#product" data-bs-toggle="collapse" role="button" aria-expanded="false"
+          aria-controls="product">
+          <i class="ri-layout-3-line"></i> <span data-key="t-product">Product</span> <span
+            class="badge badge-pill bg-danger" data-key="t-hot">Hot</span>
+        </a>
+        <div class="collapse menu-dropdown" id="product">
+          <ul class="nav nav-sm flex-column">
+            <li class="nav-item border-bottom">
+              <a [routerLink]="['/product/add']" target="_blank" class="nav-link" data-key="t-add">Add New</a>
+            </li>
+            <li class="nav-item border-bottom">
+              <a [routerLink]="['/product/list']" target="_blank" class="nav-link" data-key="t-list">List</a>
+            </li>
+            <li class="nav-item border-bottom">
+              <a [routerLink]="['/product/import']" target="_blank" class="nav-link" data-key="t-import">Import</a>
+            </li>
+            <li class="nav-item border-bottom">
+              <a [routerLink]="['/product/export']" target="_blank" class="nav-link" data-key="t-export">Export</a>
+            </li>
+          </ul>
         </div>
+      </li>
+
+
+
+
+    </ul>
+  </div>
+</div>
+
+<!--- Right Cart Start-->
+
+<div class="cartoffcanvas offcanvas offcanvas-end p-3" id="cartoffcanvas">
+  <div class="offcanvas-header border-bottom">
+    <h1 class="offcanvas-title">CARRITO</h1>
+    <button type="button" class="btn-close m-2" data-bs-dismiss="offcanvas"></button>
+
+  </div>
+  <div class="offcanvas-body">
+
+    <!-- cart table start -->
+    <div class="table-responsive">
+      <table class="table" *ngIf="products.length != 0">
+        <tbody class="text-center" *ngFor="let item of products">
+          <tr>
+            <!-- product img end -->
+            <td class="item-img">
+              <img [src]="serverport + item.images[0]" alt="" width="200">
+            </td>
+            <!-- product img end -->
+            <!-- product name start -->
+            <td class="cart-product-name text-left">
+              <a href="single-product.html">{{item.title}}</a>
+              <p>SKU : {{item.sku}}</p>
+              <p>Price : {{ item.price | currency: 'EUR': 'symbol-narrow':'1.2-2':'es' }}</p>
+            </td>
+
+            <!-- remove icon start -->
+            <td class="remove-icon">
+              <button type="button" (click)="removeItem(item)"> <i class="ri-delete-bin-7-fill"></i> </button>
+            </td>
+            <!-- remove icon end -->
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <div class="d-flex align-items-center justify-content-center p-5" *ngIf="products.length === 0">
+      <div class="text-center">
+        <img class="img-fluid"
+          src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90"
+          alt="">
+        <h5 class="card-title">NO HAY PRODUCTOS EN EL CARRITO!</h5>
+        <div class="d-grid mt-3">
+          <a  class="btn btn-green" [routerLink]="['/']">Volver a la tienda</a>
+        </div>
+      </div>
     </div>
 
 
 
+
+  </div>
+  <div class="offcanvas-footer p-2 border-top">
+    <div class="d-grid mb-5">
+      <h4 class="text-green">SUBTOTAL (IVA INC.): <span>{{ grandTotal | currency: 'EUR': 'symbol-narrow':'1.2-2':'es'
+          }}</span></h4>
+    </div>
+    <div class="d-grid mb-2">
+      <button type="button" data-bs-toggle="offcanvas" data-bs-target="#cartoffcanvas" class="btn btn-secondary btn-block" (click)="openCartDetails()">Ver carrito</button>
+    </div>
+    <div class="d-grid">
+      <button type="button" class="btn btn-info btn-block bg-green">Finalizar compra</button>
+    </div>
+  </div>
+</div>
+<!--- Right Cart End-->

@@ -1,1 +1,290 @@
-<p>public-checkout works!</p>
+<div class="container">
+    <div class="row mt-4 mb-2">
+        <div class="col-12">
+            <h4 class="mb-3">¿Tienes un cupón? <a [routerLink]="['/finalizar-compra/']"> clic aquí para introducir tu
+                    código</a></h4>
+            <div class="d-flex align-items-center w-100 h-50 bg-green text-white p-4">
+                <h5 class="text-white lh-4"><i class="ri-check-fill"></i> Se ha aplicado un descuento Brother 5x4 a tu
+                    carrito.</h5>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-8">
+            <div class="card">
+                <div class="card-body checkout-tab">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <div class="form-check form-switch form-switch-sm" dir="ltr">
+                                    <input type="checkbox" class="form-check-input" id="need_invoice">
+                                    <label class="form-check-label" for="need_invoice">
+                                        <h4>NECESITO FACTURA (opcional)</h4>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <h4>DETALLES DE FACTURACIÓN</h4>
+                            </div>
+                        </div><!--end col-->
+                    </div>
+
+                    <form action="javascript:void(0);">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="Nombre" class="form-label">Nombre <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control rounded-pill mb-3" id="Nombre">
+                                </div>
+                            </div><!--end col-->
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="Apellidos" class="form-label">Apellidos <span
+                                            class="text-danger">*</span> </label>
+                                    <input type="text" class="form-control rounded-pill mb-3" id="Apellidos">
+                                </div>
+                            </div><!--end col-->
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="compnayNameinput" class="form-label">Nombre de la empresa
+                                        (opcional)</label>
+                                    <input type="text" class="form-control rounded-pill mb-3" id="compnayNameinput">
+                                </div>
+                            </div><!--end col-->
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="nif" class="form-label">NIF/CIF/NIE (opcional)</label>
+                                    <input type="text" class="form-control rounded-pill mb-3" id="nif">
+                                </div>
+                            </div><!--end col-->
+
+                            <div class="col-12">
+                                <div class="mb-3">                                 
+                                    <label for="selectedCountry" class="form-label">País/Región <span
+                                        class="text-danger">*</span></label>
+                                    <select id="selectedCountry" [(ngModel)]="selectedCountry" name="selectedCountry" 
+                                        (change)="onCountryChange()" class="form-select rounded-pill mb-3">
+                                      
+                                        <option selected value="">-- Select País/Región --</option>
+                                        <option *ngFor="let country of countries" [value]="country.code">{{ country.name
+                                            }}</option>
+                                    </select>
+                                </div>
+                            </div><!--end col-->
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="selectedState" class="form-label">Provincia <span class="text-danger">*</span>
+                                    </label>                                  
+                                    <select id="selectedState" [(ngModel)]="selectedState" name="selectedState" class="form-select rounded-pill mb-3">
+                                        <option selected value="">-- Select Provincia --</option>
+                                        <option *ngFor="let state of states" [value]="state.code">{{ state.name }}</option>
+                                      </select>
+                                </div>
+                            </div><!--end col-->
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="road_direction" class="form-label">Dirección de la calle <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control rounded-pill mb-3"
+                                        placeholder="Número de la casa y nombre de la calle" id="road_direction">
+                                </div>
+                            </div><!--end col-->
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control rounded-pill mb-3"
+                                        placeholder="Apartamento, habitación, etc. (opcional)" id="billing_address_2">
+                                </div>
+                            </div><!--end col-->
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="postal_code" class="form-label">Código postal <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control rounded-pill mb-3" id="postal_code">
+                                </div>
+                            </div><!--end col-->
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="city" class="form-label">Localidad / Ciudad <span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control rounded-pill mb-3" id="city">
+                                </div>
+                            </div><!--end col-->
+                           
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="telephone" class="form-label">Teléfono <span
+                                            class="text-danger">*</span> </label>
+                                    <input type="text" class="form-control rounded-pill mb-3" id="telephone">
+                                </div>
+                            </div><!--end col-->
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Dirección de correo electrónico <span
+                                            class="text-danger">*</span> </label>
+                                    <input type="email" class="form-control rounded-pill mb-3" id="email">
+                                </div>
+                            </div><!--end col-->
+                            <div class="col-12">
+                                <div class="mb-3 border-bottom">
+
+                                </div>
+                            </div><!--end col-->
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <div class="form-check form-switch form-switch-sm" dir="ltr">
+                                        <input type="checkbox" class="form-check-input" id="customSwitchsizelg">                                         
+                                        <label class="form-check-label" for="customSwitchsizelg">¿ENVIAR A UNA DIRECCIÓN
+                                            DIFERENTE?</label>
+                                    </div>
+                                </div>
+                            </div><!--end col-->
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="order_note" class="form-label">Dirección de correo electrónico </label>
+                                    <textarea rows="4" class="form-control mb-3" id="order_note"></textarea>
+                                </div>
+                            </div><!--end col-->
+
+                        </div><!--end row-->
+                    </form>
+
+                </div>
+                <!-- end card body -->
+            </div>
+            <!-- end card -->
+        </div>
+        <!-- end col -->
+
+        <div class="col-xl-4">
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex">
+                        <div class="flex-grow-1">
+                            <h3 class="card-title mb-0">TU PEDIDO</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive table-card">
+                        <table class="table table-borderless align-middle mb-0">
+                            <thead class="table-light text-muted">
+                                <tr class="w-100">
+                                    <th colspan="1">PRODUCTO</th>
+                                    <th class="text-end" colspan="2">SUBTOTAL (IVA INC.)</th>
+                                </tr>
+                            </thead>
+                            <tbody *ngIf="cartItems.length > 0">
+                                <tr *ngFor="let product of cartItems">
+                                    <td colspan="2">
+                                        <h5 class="fs-14"><a href="apps-ecommerce-product-details.html"
+                                                class="text-dark"><a [routerLink]="['/producto/', product.slug]"
+                                                    target="_blank">{{product.title}}</a></a></h5>
+                                        <p class="text-muted mb-0">{{product.price}} x {{product.quantity}}</p>
+                                    </td>
+                                    <td colspan="1" class="text-end">{{product.total | number: '1.2-2': 'es'}}</td>
+                                </tr>
+
+                                <tr class="border-bottom"></tr>
+                                <tr class="border-bottom">
+                                    <td class="fw-semibold" colspan="2">Subtotal (IVA inc.):</td>
+                                    <td class="fw-semibold text-end">{{totalAmount | currency: 'EUR':
+                                        'symbol-narrow':'1.2-2':'es'}}</td>
+                                </tr>
+                                <tr class="border-bottom">
+                                    <td colspan="2">Discount <span class="text-muted">(VELZON15)</span> : </td>
+                                    <td class="text-end">- {{discountAmount}}</td>
+                                </tr>
+                                <tr class="border-bottom">
+                                    <td>Envío (IVA Inc.):</td>
+                                    <td colspan="2" class="text-end">Introduce tu dirección para ver las opciones de
+                                        envío.</td>
+                                </tr>
+
+                                <tr class="table-active">
+                                    <th colspan="2" class="fs-5">Total (IVA inc.):</th>
+                                    <td class="text-end" colspan="1">
+                                        <span class=" fs-5 fw-semibold text-green">
+                                            {{grandTotal | currency: 'EUR': 'symbol-narrow':'1.2-2':'es'}}
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="d-flex mt-5">
+                        <!-- Custom Radio Color -->
+                        <div class="form-check form-radio-primary mb-3">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
+                            <label class="form-check-label" for="creditCard">
+                                Pago con tarjeta <img src="assets/images/payment/redsys.png"
+                                    style="max-height: 20px; margin-left: 5px;" />
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Custom Radio Color -->
+                    <div class="d-flex mt-2">
+                        <div class="form-check form-radio-primary mb-3">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="bizum" checked>
+                            <label class="form-check-label" for="bizum">
+                                BIZUM <img src="assets/images/payment/Bizum.png"
+                                    style="max-height: 20px; margin-left: 5px;" />
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Custom Radio Color -->
+                    <div class="d-flex align-items-center mt-2">
+                        <div class="form-check form-radio-primary mb-3">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="PayPal" checked>
+                            <label class="form-check-label d-flex align-items-center" for="PayPal">
+                                PayPal
+                                <img src="assets/images/payment/paypal.png" alt="PayPal"
+                                    style="max-height: 20px; margin-left: 5px;margin-right: 15px;">
+                                <a href="https://www.paypal.com/es/webapps/mpp/home">¿Qué es PayPal?</a>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Custom Radio Color -->
+                    <div class="d-flex mt-2">
+                        <div class="form-check form-radio-primary mb-3">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="wiretransfer" checked>
+                            <label class="form-check-label" for="wiretransfer">
+                                Transferencia bancaria
+                            </label>
+                        </div>
+                    </div>
+                    <div class="d-grid border-bottom p-2"></div>
+                    <div class="d-flex mt-4">
+                        <p>
+                            Tus datos personales se utilizarán para procesar tu pedido, mejorar tu experiencia en esta
+                            web y otros propósitos descritos en nuestra política de privacidad.
+                        </p>
+                    </div>
+                    <div class="d-grid border-bottom p-2"></div>
+                    <div class="mb-3 mt-3">
+                        <div class="form-check form-switch form-switch-sm" dir="ltr">
+                            <input type="checkbox" class="form-check-input" id="decleration" required checked="">
+                            <label class="form-check-label" for="decleration">He leído y estoy de acuerdo con los
+                                <a class="text-green" [routerLink]="['/terminos-y-condiciones']"
+                                    target="_blank">términos y condiciones</a> de la web
+                                *</label>
+                        </div>
+                    </div>
+
+                    <div class="d-grid w-100 text-center p-3">
+                        <button type="submit" class="btn btn-green">Realizar el pedido</button>
+                    </div><!--end col-->
+
+                </div>
+                <!-- end card body -->
+            </div>
+            <!-- end card -->
+        </div>
+        <!-- end col -->
+    </div>
+    <!-- end row -->
+
+</div>

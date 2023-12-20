@@ -28,10 +28,17 @@ import { PublicStationeryComponent } from './pages/public/public-stationery/publ
 import { PublicPrinterFinderComponent } from './pages/public/public-printer-finder/public-printer-finder.component';
 import { ProductAddComponent } from './pages/admin/product-add/product-add.component';
 import { ProductListComponent } from './pages/admin/product-list/product-list.component';
+import { PasswordResetComponent } from './pages/other/password-reset/password-reset.component';
+import { LostPasswordComponent } from './pages/public/lost-password/lost-password.component';
+import { SingleProductComponent } from './pages/public/public-single-product/single-product.component';
+import { PublicProductSearchComponent } from './pages/public/public-product-search/public-product-search.component';
+import { PublicFeaturedProductsComponent } from './pages/public/public-featured-products/public-featured-products.component';
+import { PublicFavoritesComponent } from './pages/public/public-favorites/public-favorites.component';
+import { PublicCheckoutComponent } from './pages/public/public-checkout/public-checkout.component';
+import { PublicCountrySelectorComponent } from './pages/public/public-country-selector/public-country-selector.component';
 
 
 const routes: Routes = [
-  //https://stackblitz.com/edit/angular-multi-layout-example?file=app%2Fapp.routing.ts
    //Public Routes will go here
    { 
     path: '', 
@@ -44,12 +51,18 @@ const routes: Routes = [
       { path: 'cartucheayahorra', component: PublicProgramComponent },
       { path: 'sobre-cartuchea', component: PublicSobreCartucheaComponent },
       { path: 'carrito', component: PublicCartComponent},
+      { path: 'finalizar-compra', component: PublicCheckoutComponent},
       { path: 'mi-cuenta', component: PublicMyAccountComponent},
+      { path: 'mi-cuenta/lost-password', component: LostPasswordComponent },
       { path: 'aviso-legal', component: PublicLegalWarningComponent},
       { path: 'politica-de-privacidad', component: PublicPrivacyPolicyComponent},
       { path: 'politica-de-cookies', component: PublicCookiesPolicyComponent},
       { path: 'buscador-de-impresoras', component: PublicPrinterFinderComponent},
-      
+      { path: 'producto/:slug', component: SingleProductComponent},
+      { path: 'search/:query', component: PublicProductSearchComponent},
+      { path: 'featured-all', component: PublicFeaturedProductsComponent},
+      { path: 'favoritos', component: PublicFavoritesComponent},
+      { path: 'cat/informatica/:text', component: PublicInkCartridgesComponent},
       // { path: 'test/:id', component: AboutComponent }
     ]
 },{

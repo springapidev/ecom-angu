@@ -1,0 +1,120 @@
+ .navbar-menu .navbar-nav .nav-link[data-bs-toggle=collapse]:after {
+    display: block;
+    content: "\f0142";
+    font-family: "Material Design Icons";
+    margin-left: auto;
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    transition: transform .2s;
+    transition: transform .2s,-webkit-transform .2s;
+    font-size: 1.05rem;
+    position: absolute;
+    right: 18px;
+    color: var(--vz-vertical-menu-title-color);
+}
+
+/* magnifier.component.css */
+.image-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image:hover {
+  transform: scale(2.5); /* Adjust the magnification level as needed */
+  cursor: grab;
+}
+
+.image-container.dragging .image {
+  cursor: grabbing;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.7); /* Adjust the background color and transparency as needed */
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.show-photo-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #065;
+  cursor: pointer;
+}
+
+
+.input-step input {
+  width: 2em;
+  height: 100%;
+  text-align: center;
+  border: 0;
+  background: 0 0;
+  color: var(--vz-body-color);
+  border-radius: 0.25rem;
+}
+.input-step {
+  border: 1px solid var(--vz-input-border);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  overflow: visible;
+  height: 37.5px;
+  border-radius: 0.25rem;
+  background: var(--vz-input-bg);
+  padding: 0;
+  border-radius: 50px;
+}
+.input-step .minus {
+  width: 1.4em;
+  font-weight: 300;
+  height: 100%;
+  line-height: .1em;
+  font-size: 1.4em;
+  padding: 0.2em !important;
+  background: var(--vz-input-bg);
+  color: black;
+  border-right: 1px solid var(--vz-input-border);
+  border-radius: 50px 0 0 50px;
+}
+.input-step .plus {
+  width: 1.4em;
+  font-weight: 300;
+  height: 100%;
+  line-height: .1em;
+  font-size: 1.4em;
+  padding: 0.2em !important;
+  background: var(--vz-input-bg);
+  color: black;
+  border-left: 1px solid var(--vz-input-border);
+  border-radius: 0 50px 50px 0;
+}
+.input-step .minus:hover{
+  background: green;
+  color: white;
+  font-weight: 900;
+}
+.input-step .plus:hover{
+  background: green;
+  color: white;
+  font-weight: 900;
+}
+
+.step-cart{
+  font-size: 24px;
+}

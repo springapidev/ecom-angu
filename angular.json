@@ -25,13 +25,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"            
-                     
+              "src/styles.css"                  
             ],
             "scripts": [
             ],
-            "allowedCommonJsDependencies": [
-             
+            "allowedCommonJsDependencies": [             
             ]
           },
           "configurations": {
@@ -44,8 +42,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "102kb",
+                  "maximumError": "204kb"
                 }
               ],
               "outputHashing": "all"

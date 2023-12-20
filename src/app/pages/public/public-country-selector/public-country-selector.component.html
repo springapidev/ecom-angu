@@ -1,0 +1,13 @@
+<!-- country-selector.component.html -->
+
+<label for="selectedCountry">Select Country:</label>
+<select id="selectedCountry" [(ngModel)]="selectedCountry" (change)="onCountryChange()">
+  <option [value]="' '">-- Select Country --</option>
+  <option *ngFor="let country of countries" [value]="country.code">{{ country.name }}</option>
+</select>
+
+<label for="selectedState">Select State:</label>
+<select id="selectedState" [(ngModel)]="selectedState">
+  <option [value]="' '">-- Select State --</option>
+  <option *ngFor="let state of states" [value]="state.code">{{ state.name }}</option>
+</select>

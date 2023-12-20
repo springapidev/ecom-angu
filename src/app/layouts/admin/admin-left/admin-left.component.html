@@ -4,19 +4,19 @@
         <!-- Dark Logo-->
         <a href="index.html" class="logo logo-dark">
             <span class="logo-sm">
-                <img src="assets/admin/images/logo-sm.png" alt="" height="22">
+                <img src="assets/images/logo-sm.png" alt="" height="22">
             </span>
             <span class="logo-lg">
-                <img src="assets/admin/images/logo-dark.png" alt="" height="17">
+                <img src="assets/images/logo-dark.png" alt="" height="17">
             </span>
         </a>
         <!-- Light Logo-->
         <a href="index.html" class="logo logo-light">
             <span class="logo-sm">
-                <img src="assets/admin/images/logo-sm.png" alt="" height="22">
+                <img src="assets/images/logo-sm.png" alt="" height="22">
             </span>
             <span class="logo-lg">
-                <img src="assets/admin/images/logo-light.png" alt="" height="17">
+                <img src="assets/images/logo-light.png" alt="" height="17">
             </span>
         </a>
         <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover" id="vertical-hover">
@@ -30,191 +30,128 @@
             <div id="two-column-menu">
             </div>
             <ul class="navbar-nav" id="navbar-nav">
-                <li class="menu-title"><span data-key="t-menu">Menu</span></li>
-                <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/dashboard']">
-                        <i class="ri-layout-3-line"></i> <span data-key="t-dashboards">Dashboard</span>
-                    </a>             
-                </li> <!-- end Dashboard Menu -->
-               
+                <li class="nav-item"> 
+                    <a class="nav-link" href="#" role="button">
+                    <i class="ri-apps-2-line"></i> <span data-key="t-dashboard">Dashboard</span>
+                    </a>
+                </li>
+           
 
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="#product" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="product">
-                        <i class="ri-layout-3-line"></i> <span data-key="t-product">Product</span> <span class="badge badge-pill bg-danger" data-key="t-hot">Hot</span>
+                    <a class="nav-link menu-link" href="#question" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="question">
+                        <i class="ri-layout-3-line"></i> <span data-key="t-question">Question</span> 
                     </a>
-                    <div class="collapse menu-dropdown" id="product">
+                    <div class="menu-dropdown collapse" id="question" >
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a [routerLink]="['/product/add']" target="_blank" class="nav-link" data-key="t-add">Add New</a>
+                                <a [routerLink]="'/question/add'" class="nav-link" data-key="t-add"> Add </a>
                             </li>
                             <li class="nav-item">
-                                <a [routerLink]="['/product/list']" target="_blank" class="nav-link" data-key="t-list">List</a>
+                                <a [routerLink]="'/question/list'" class="nav-link" data-key="t-list"> List </a>
                             </li>
-                            <li class="nav-item">
-                                <a [routerLink]="['/product/import']" target="_blank" class="nav-link" data-key="t-import">Import</a>
-                            </li>
-                            <li class="nav-item">
-                                <a [routerLink]="['/product/export']" target="_blank" class="nav-link" data-key="t-export">Export</a>
-                            </li>
+                        
                         </ul>
                     </div>
-                </li> 
-
-             
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="#order" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="order">
-                        <i class="ri-layout-3-line"></i> <span data-key="t-order">Orders</span>
-                    </a>
-                    <div class="collapse menu-dropdown" id="order">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a [routerLink]="['/order/report']" target="_blank" class="nav-link" data-key="t-order-report">Report</a>
-                            </li>     
-                            <li class="nav-item">
-                                <a [routerLink]="['/order/my']" target="_blank" class="nav-link" data-key="t-order-report">My Orders</a>
-                            </li>                      
-                        </ul>
-                    </div>
-                </li> 
+                </li>
 
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="#marketing" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="marketing">
-                        <i class="ri-layout-3-line"></i> <span data-key="t-marketing">Product</span> <span class="badge badge-pill bg-danger" data-key="t-hot">Hot</span>
+                    <a class="nav-link menu-link" href="#quiz" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="quiz">
+                        <i class="ri-layout-3-line"></i> <span data-key="t-quiz">Quiz</span> 
                     </a>
-                    <div class="collapse menu-dropdown" id="marketing">
+                    <div class="menu-dropdown collapse" id="quiz" >
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a [routerLink]="['/product/coupon']" target="_blank" class="nav-link" data-key="t-coupon">Coupons</a>
-                            </li>                           
+                                <a [routerLink]="'/quiz/add'" class="nav-link" data-key="t-add"> Add </a>
+                            </li>
+                            <li class="nav-item">
+                                <a [routerLink]="'/quiz/list'" class="nav-link" data-key="t-list"> List </a>
+                            </li>
+                        
                         </ul>
                     </div>
-                </li> 
-               
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="#support" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="support">
-                        <i class="ri-layout-3-line"></i> <span data-key="t-support">Product</span> <span class="badge badge-pill bg-danger" data-key="t-hot">Hot</span>
-                    </a>
-                    <div class="collapse menu-dropdown" id="support">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a [routerLink]="['/support/contact']" target="_blank" class="nav-link" data-key="t-contact">Contact</a>
-                            </li>    
-                            <li class="nav-item">
-                                <a [routerLink]="['/support/tickets']" target="_blank" class="nav-link" data-key="t-ticket">Active Tickets</a>
-                            </li>                        
-                        </ul>
-                    </div>
-                </li> 
-                
-                <li class="menu-title"><i class="ri-more-fill"></i> <span data-key="t-setting">Settings</span></li>
+                </li>
+  
 
+  
+
+                <li class="nav-item"> 
+                    <a class="nav-link" href="#" role="button">
+                    <i class="ri-apps-2-line"></i> <span data-key="t-progres">Progress</span>
+                    </a>
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" href="#" role="button">
+                    <i class="ri-apps-2-line"></i> <span data-key="t-import-export">Import Export</span>
+                    </a>
+                </li>
+              
                 <li class="nav-item">
-                    <a class="nav-link menu-link" href="#setting" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="setting">
+                    <a class="nav-link menu-link" href="#Settings" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="Settings">
                         <i class="ri-apps-2-line"></i> <span data-key="t-setting">Settings</span>
                     </a>
-                    <div class="collapse menu-dropdown" id="setting">
-                        <ul class="nav nav-sm flex-column">                           
+                    <div class="collapse menu-dropdown" id="Settings">
+                        <ul class="nav nav-sm flex-column">
+                      
                             <li class="nav-item">
-                                <a href="#Category" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="Category" >
-                                    <i class="ri-map-pin-line"></i> <span data-key="t-category">Brand</span>
+                                <a href="#category" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="category" data-key="t-category">
+                                    Category
                                 </a>
-                                <div class="collapse menu-dropdown" id="Category">
+                                <div class="collapse menu-dropdown" id="category">
                                     <ul class="nav nav-sm flex-column">
                                         <li class="nav-item">
-                                            <a href="#" class="nav-link" data-key="t-add"> Add New </a>
-                                        </li>     
+                                            <a [routerLink]="'/category/add'" class="nav-link" data-key="t-add"> Add </a>
+                                        </li>
                                         <li class="nav-item">
-                                            <a href="#" class="nav-link" data-key="t-list"> List </a>
-                                        </li>                                       
+                                            <a [routerLink]="'/category/list'" class="nav-link" data-key="t-list"> List </a>
+                                        </li>
                                     </ul>
                                 </div>
-                            </li>                          
-                   
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#brand" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="brand">
-                        <i class="ri-map-pin-line"></i> <span data-key="t-brand">Brand</span>
-                    </a>
-                    <div class="collapse menu-dropdown" id="brand">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a href="maps-google.html" class="nav-link" data-key="t-add">
-                                    Add New
-                                </a>
                             </li>
+
+
                             <li class="nav-item">
-                                <a href="maps-vector.html" class="nav-link" data-key="t-list">
-                                    List
+                                <a href="#subject" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="subject" data-key="t-subject">
+                                    Subject
                                 </a>
-                            </li>                           
+                                <div class="collapse menu-dropdown" id="subject">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a [routerLink]="'/subject/add'" class="nav-link" data-key="t-add"> Add </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a [routerLink]="'/subject/list'" class="nav-link" data-key="t-list"> List </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>   
+                            
+                            <li class="nav-item">
+                                <a href="#chapter" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="chapter" data-key="t-chapter">
+                                    Chapter
+                                </a>
+                                <div class="collapse menu-dropdown" id="chapter">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item">
+                                            <a [routerLink]="'/chapter/add'" class="nav-link" data-key="t-add"> Add </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a [routerLink]="'/chapter/list'" class="nav-link" data-key="t-list"> List </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>    
+                            
+                            
+                            
+
                         </ul>
                     </div>
                 </li>
+       
 
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="#tags" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="tags">
-                        <i class="ri-map-pin-line"></i> <span data-key="t-tag">Tags</span>
-                    </a>
-                    <div class="collapse menu-dropdown" id="tags">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a href="maps-google.html" class="nav-link" data-key="t-add">
-                                    Add New
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="maps-vector.html" class="nav-link" data-key="t-list">
-                                    List
-                                </a>
-                            </li>                           
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="#manufacturer" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="manufacturer">
-                        <i class="ri-map-pin-line"></i> <span data-key="t-manufacturer">Manufacturer</span>
-                    </a>
-                    <div class="collapse menu-dropdown" id="manufacturer">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a href="maps-google.html" class="nav-link" data-key="t-add">
-                                    Add New
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="maps-vector.html" class="nav-link" data-key="t-list">
-                                    List
-                                </a>
-                            </li>                           
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="#warehourse" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="warehourse">
-                        <i class="ri-map-pin-line"></i> <span data-key="t-warehourse">Ware Hourse</span>
-                    </a>
-                    <div class="collapse menu-dropdown" id="warehourse">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a href="maps-google.html" class="nav-link" data-key="t-add">
-                                    Add New
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="maps-vector.html" class="nav-link" data-key="t-list">
-                                    List
-                                </a>
-                            </li>                           
-                        </ul>
-                    </div>
-                </li>
 
             </ul>
         </div>
-    </li>
-    </ul>
         <!-- Sidebar -->
     </div>
 

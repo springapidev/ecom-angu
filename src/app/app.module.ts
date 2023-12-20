@@ -45,8 +45,22 @@ import { ProductAddComponent } from './pages/admin/product-add/product-add.compo
 import { ProductListComponent } from './pages/admin/product-list/product-list.component';
 import { OrderComponent } from './pages/admin/order/order.component';
 import { OrderHistoryComponent } from './pages/admin/order-history/order-history.component';
+import { LostPasswordComponent } from './pages/public/lost-password/lost-password.component';
+import { SingleProductComponent } from './pages/public/public-single-product/single-product.component';
+import { PublicProductSearchComponent } from './pages/public/public-product-search/public-product-search.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductService } from './services/product.service';
+import { registerLocaleData } from '@angular/common';
+import localeEs from '@angular/common/locales/es';
+import { TitleFormatPipe } from './pipes/title-format.pipe';
+import { FeaturedTitleFormatPipe } from './pipes/featured-title-format.pipe';
+import { PublicFeaturedProductsComponent } from './pages/public/public-featured-products/public-featured-products.component';
+import { PublicFavoritesComponent } from './pages/public/public-favorites/public-favorites.component';
+import { FormsModule } from '@angular/forms';
+import { PublicCountrySelectorComponent } from './pages/public/public-country-selector/public-country-selector.component';
 
 
+registerLocaleData(localeEs, 'es');
 
 @NgModule({
   declarations: [
@@ -93,12 +107,22 @@ import { OrderHistoryComponent } from './pages/admin/order-history/order-history
     ProductListComponent,
     OrderComponent,
     OrderHistoryComponent,
+    LostPasswordComponent,
+    SingleProductComponent,
+    PublicProductSearchComponent,
+    TitleFormatPipe,
+    FeaturedTitleFormatPipe,
+    PublicFeaturedProductsComponent,
+    PublicFavoritesComponent,
+    PublicCountrySelectorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

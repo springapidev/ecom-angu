@@ -1,0 +1,5 @@
+.explore-box .explore-img {
+    height: 120px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}

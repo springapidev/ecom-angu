@@ -1,0 +1,59 @@
+.input-step input {
+    width: 2em;
+    height: 100%;
+    text-align: center;
+    border: 0;
+    background: 0 0;
+    color: var(--vz-body-color);
+    border-radius: 0.25rem;
+}
+.input-step {
+    border: 1px solid var(--vz-input-border);
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    overflow: visible;
+    height: 37.5px;
+    border-radius: 0.25rem;
+    background: var(--vz-input-bg);
+    padding: 0;
+    border-radius: 50px;
+}
+.input-step .minus {
+    width: 1.4em;
+    font-weight: 300;
+    height: 100%;
+    line-height: .1em;
+    font-size: 1.4em;
+    padding: 0.2em !important;
+    background: var(--vz-input-bg);
+    color: black;
+    border-right: 1px solid var(--vz-input-border);
+    border-radius: 50px 0 0 50px;
+}
+.input-step .plus {
+    width: 1.4em;
+    font-weight: 300;
+    height: 100%;
+    line-height: .1em;
+    font-size: 1.4em;
+    padding: 0.2em !important;
+    background: var(--vz-input-bg);
+    color: black;
+    border-left: 1px solid var(--vz-input-border);
+    border-radius: 0 50px 50px 0;
+}
+.input-step .minus:hover{
+    background: green;
+    color: white;
+    font-weight: 900;
+}
+.input-step .plus:hover{
+    background: green;
+    color: white;
+    font-weight: 900;
+}
+
+.step-cart{
+    font-size: 24px;
+}

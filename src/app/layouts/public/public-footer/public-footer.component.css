@@ -1,0 +1,14 @@
+.card{
+    background-color: transparent!important;
+    box-shadow: none!important;
+    border-radius: 0px!important;
+   
+}
+
+
+
+.card-header{
+    background-color: transparent!important;
+    padding: 0px!important;
+    border-bottom: none!important;
+}

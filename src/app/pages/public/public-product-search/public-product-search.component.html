@@ -1,0 +1,611 @@
+<div class="container-fluid bg-black mt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-white text-center p-5">
+                <div class="d-flex justify-content-center align-items-center">
+                    <h1 class="breadcrumb-title text-white">RESULTADOS PARA</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid ">
+    <div class="container bg-white pt-5 ">
+
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 single-product-border mb-5">
+
+                <!---Search Input Start-->
+
+                <div class="container">
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <div class="search-box ">
+                                <input type="text" class="form-control rounded-pill"
+                                    placeholder="Buscar por consumible o impresora...">
+                                <i class="ri-search-2-line search-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!---Search Input End-->
+
+                    <!---Ordering Start-->
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <!-- Accordions Bordered -->
+                            <div class="accordion custom-accordionwithiconx" id="accordionBordered">
+
+                                <div class="accordion-item mt-2">
+                                    <h2 class="accordion-header" id="accordionborderedExample2">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#accor_borderedExamplecollapse2"
+                                            aria-expanded="false" aria-controls="accor_borderedExamplecollapse2">
+                                            Ordenar por precio
+                                        </button>
+                                    </h2>
+                                    <div id="accor_borderedExamplecollapse2" class="accordion-collapse collapse"
+                                        aria-labelledby="accordionborderedExample2" data-bs-parent="#accordionBordered">
+                                        <div class="accordion-body">
+                                            <div class="form-check form-radio-outline form-radio-success mb-3">
+                                                <input class="form-check-input" type="radio" name="formradiocolor11"
+                                                    id="formradioRight15" checked>
+                                                <label class="form-check-label" for="formradioRight15">
+                                                    De menor a mayor
+                                                </label>
+                                            </div>
+                                            <div class="form-check form-radio-outline form-radio-warning mb-3">
+                                                <input class="form-check-input" type="radio" name="formradiocolor11"
+                                                    id="formradioRight16" checked>
+                                                <label class="form-check-label" for="formradioRight16">
+                                                    De mayor a menor
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!---Ordering End-->
+
+
+                    <!---Price Filter Start-->
+
+                    <!---Price Filter End-->
+
+                    <!---Brand Filter Start-->
+
+                    <div class="row">
+
+                        <div class="col-12">
+                            <div class="border-bottom"></div>
+                            <h6 class="mt-3 mb-3">BUSCADOR DE IMPRESORAS</h6>
+                            <div>
+                                <label for="brand" class="form-label">Marca</label>
+                                <select class="form-select rounded-pill mb-3" aria-label="Default select example"
+                                    id="brand">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">Information Architecture</option>
+                                    <option value="2">UI/UX Design</option>
+                                    <option value="3">Back End Development</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="brand" class="form-label">Modelo</label>
+                                <select class="form-select rounded-pill mb-3" aria-label="Default select example"
+                                    id="brand">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">Information Architecture</option>
+                                    <option value="2">UI/UX Design</option>
+                                    <option value="3">Back End Development</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="brand" class="form-label">Referencia</label>
+                                <select class="form-select rounded-pill mb-3" aria-label="Default select example"
+                                    id="brand">
+                                    <option selected>Seleccionar</option>
+                                    <option value="1">Information Architecture</option>
+                                    <option value="2">UI/UX Design</option>
+                                    <option value="3">Back End Development</option>
+                                </select>
+                            </div>
+                            <div class="border-bottom mt-3 mb-3"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!---Brand Filter End-->
+
+                <!--- Category Menu-->
+
+
+                <div class="card">
+                    <div class="card-header d-flex align-items-center">
+                        <h6 class="card-title mb-0 flex-grow-1">CATEGORÍAS</h6>
+                        <a class="text-muted" [routerLink]="['/featured-all']">
+                            See All <i class="ri-arrow-right-line align-bottom"></i>
+                        </a>
+                    </div>
+                    <div class="card-body" *ngIf="categories">
+                        <!-- <ul class="nav flex-column">
+                            <li *ngFor="let category of categories" class="nav-item">
+                              <a *ngIf="category.subCategories && category.subCategories.length > 0" 
+                                 [attr.data-bs-toggle]="category.subCategories ? 'collapse' : ''"
+                                 [attr.href]="'#' + category.id"
+                                 role="button"
+                                 aria-expanded="false"
+                                 [attr.aria-controls]="category.id"
+                                 class="nav-link">
+                                {{ category.name }}
+                              </a>
+                              <div *ngIf="category.subCategories && category.subCategories.length > 0" 
+                                   [attr.id]="category.id"
+                                   class="menu-dropdown collapse">
+                              <app-menu [categories]="category.subCategories"></app-menu> -->
+                        <!-- </div>
+                              <a *ngIf="!category.subCategories || category.subCategories.length === 0" 
+                                 [routerLink]="['/category', category.id]"
+                                 class="nav-link">
+                                {{ category.name }}
+                              </a>
+                            </li>
+                          </ul> -->
+
+
+<!-- Accordion Smooth Open/Close Example -->
+<div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button" type="button">
+                How do I set up my profile?
+            </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">The renewal of your SlickText service happens on the anniversary of your original paid sign up date. Upgrading in the middle of your billing period will not change the billing date. Upgrading does however force an immediate, pro-rated charge to take place on your account.</div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button" type="button">
+                What can I do with my project?
+            </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">If you had signed up on a free account with Slicktext, then upgraded to a paid plan at a later date, your bill will renew based on the date you had upgraded to a paid plan. All invoices are able to be viewed under your plan options in your SlickText account.</div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button" type="button">
+                Where can I go to edit voice settings?
+            </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">No, we cannot provide this information. Opting out from a list is an anonymous, private act. This prevents further harassment. Providing this information is considered bad practice, and further communication after they opt out would be considered against compliance.</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Use JavaScript/jQuery to handle accordion behavior
+    $(document).ready(function () {
+        $('.accordion-button').click(function () {
+            $(this).closest('.accordion-item').find('.accordion-collapse').collapse('toggle');
+        });
+    });
+</script>
+
+
+
+                        <ul class="navbar-nav" id="navbar-category" *ngIf="categories">
+
+                            <li class="nav-item" *ngFor="let category of categories">
+                                <a class="nav-link menu-link" href="#{{category.id}}" data-bs-toggle="collapse"
+                                    role="button" aria-expanded="false"
+                                    [attr.aria-controls]="'collapse-' + category.id">
+                                    <span data-key="t-question">{{category.name}}</span>
+                                    <i *ngIf="category.subCategories && category.subCategories.length > 0"  class="ri-arrow-down-s-line text-end"></i>
+                                </a>
+
+                                <div class="menu-dropdown collapse" id="{{category.id}}">
+                                    <ul class="nav nav-sm flex-column" *ngIf="category.subCategories">
+                                        <li class="nav-item" *ngFor="let category2 of category.subCategories">
+                                            <a href="#{{category2.id}}" class="nav-link" data-key="t-add">
+                                                {{category2.name}} 
+                                                <i *ngIf="category2.subCategories && category2.subCategories.length > 0"  class="ri-arrow-down-s-line text-end"></i>
+                                            </a>
+                                            <div class="menu-dropdown collapse" id="{{category2.id}}">
+                                                <ul class="nav nav-sm flex-column" *ngIf="category2.subCategories">
+                                                    <li class="nav-item"
+                                                        *ngFor="let category3 of category2.subCategories">
+                                                        <a href="#{{category3.id}}" class="nav-link" data-key="t-add">
+
+                                                            {{category3.name}} 
+                                                            <i *ngIf="category3.subCategories && category3.subCategories.length > 0"  class="ri-arrow-down-s-line text-end"></i>
+                                                        </a>
+                                                        <div class="menu-dropdown collapse" id="{{category3.id}}">
+                                                            <ul class="nav nav-sm flex-column"
+                                                                *ngIf="category3.subCategories">
+                                                                <li class="nav-item"
+                                                                    *ngFor="let category4 of category3.subCategories">
+                                                                    <a [routerLink]="['/category/',category4.name]"
+                                                                        class="nav-link" data-key="t-add">
+                                                                        {{category4.name}} </a>
+                                                                </li>
+
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!------ product List -->
+
+                <div class="card">
+                    <div class="card-header d-flex align-items-center">
+                        <h6 class="card-title mb-0 flex-grow-1">DESTACADOS</h6>
+                        <a class="text-muted" [routerLink]="['/featured-all']">
+                            See All <i class="ri-arrow-right-line align-bottom"></i>
+                        </a>
+                    </div>
+                    <div class="card-body" *ngIf="productsFeatured">
+                        <div class="d-flex align-items-center" *ngFor="let product of productsFeatured">
+                            <img [src]="serverport + product.images[0]" alt=""
+                                class="avatar-sm object-cover rounded-circle">
+                            <div class="ms-2">
+                                <a [routerLink]="['/producto',product.slug]">
+                                    <h6 class="fs-15 mb-1">{{product.title | featuredTitleFormat}}</h6>
+                                </a>
+                                <p class="mb-0 text-muted">{{ product.price | currency: 'EUR':
+                                    'symbol-narrow':'1.2-2':'es' }}</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+
+
+
+                <!--- Rating Start-->
+
+                <div>
+                    <div class="pb-3">
+                        <div class="bg-light px-3 py-2 rounded-2 mb-2">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-grow-1">
+                                    <div class="fs-16 align-middle text-warning">
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-fill"></i>
+                                        <i class="ri-star-half-fill"></i>
+                                    </div>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <h6 class="mb-0">4.5 out of 5</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-muted">Total <span class="fw-medium">5.50k</span> reviews
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        <div class="row align-items-center g-2">
+                            <div class="col-auto">
+                                <div class="p-2">
+                                    <h6 class="mb-0">5 star</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-2">
+                                    <div class="progress animated-progress progress-sm">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 50.16%"
+                                            aria-valuenow="50.16" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="p-2">
+                                    <h6 class="mb-0 text-muted">2758</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row align-items-center g-2">
+                            <div class="col-auto">
+                                <div class="p-2">
+                                    <h6 class="mb-0">4 star</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-2">
+                                    <div class="progress animated-progress progress-sm">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 19.32%"
+                                            aria-valuenow="19.32" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="p-2">
+                                    <h6 class="mb-0 text-muted">1063</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row align-items-center g-2">
+                            <div class="col-auto">
+                                <div class="p-2">
+                                    <h6 class="mb-0">3 star</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-2">
+                                    <div class="progress animated-progress progress-sm">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 18.12%"
+                                            aria-valuenow="18.12" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="p-2">
+                                    <h6 class="mb-0 text-muted">997</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row align-items-center g-2">
+                            <div class="col-auto">
+                                <div class="p-2">
+                                    <h6 class="mb-0">2 star</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-2">
+                                    <div class="progress animated-progress progress-sm">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 7.42%"
+                                            aria-valuenow="7.42" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-auto">
+                                <div class="p-2">
+                                    <h6 class="mb-0 text-muted">408</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row align-items-center g-2">
+                            <div class="col-auto">
+                                <div class="p-2">
+                                    <h6 class="mb-0">1 star</h6>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="p-2">
+                                    <div class="progress animated-progress progress-sm">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 4.98%"
+                                            aria-valuenow="4.98" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="p-2">
+                                    <h6 class="mb-0 text-muted">274</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                    </div>
+                </div>
+
+            </div>
+            <!--- Product Start -->
+            <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 col-xxl-9">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="d-flex justify-content-start align-items-center">
+                                <ul class="breadcrumb">
+                                    <li><a href="/" class="text-muted"><i class="fa fa-home  text-black"></i> Inicio
+                                            /</a></li>
+                                    <li class="active">Productos</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="d-flex justify-content-end align-items-end">
+                                <span class="p-1 mb-1">Mostrar: </span>
+                                <a class="p-1 mb-1" href="">9</a>
+                                <span class="p-1 mb-1">/</span>
+                                <a class="p-1 mb-1" href="">24</a>
+                                <span class="p-1 mb-1">/</span>
+                                <a class="p-1 mb-1" href="">36</a>
+
+                                <span class="p-1 mb-1">
+                                    <a href="">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19px"
+                                            height="19px" viewBox="0 0 19 19" enable-background="new 0 0 19 19"
+                                            xml:space="preserve">
+                                            <path d="M7,2v5H2V2H7 M9,0H0v9h9V0L9,0z"></path>
+                                            <path d="M17,2v5h-5V2H17 M19,0h-9v9h9V0L19,0z"></path>
+                                            <path d="M7,12v5H2v-5H7 M9,10H0v9h9V10L9,10z"></path>
+                                            <path d="M17,12v5h-5v-5H17 M19,10h-9v9h9V10L19,10z"></path>
+                                        </svg>
+                                    </a>
+                                </span>
+                                <span class="p-1 mb-1">
+                                    <a href="">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19px"
+                                            height="19px" viewBox="0 0 19 19" enable-background="new 0 0 19 19"
+                                            xml:space="preserve">
+                                            <rect width="5" height="5"></rect>
+                                            <rect x="7" width="5" height="5"></rect>
+                                            <rect x="14" width="5" height="5"></rect>
+                                            <rect y="7" width="5" height="5"></rect>
+                                            <rect x="7" y="7" width="5" height="5"></rect>
+                                            <rect x="14" y="7" width="5" height="5"></rect>
+                                            <rect y="14" width="5" height="5"></rect>
+                                            <rect x="7" y="14" width="5" height="5"></rect>
+                                            <rect x="14" y="14" width="5" height="5"></rect>
+                                        </svg>
+                                    </a>
+                                </span>
+                                <span class="p-1 mb-1">
+                                    <a href="">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="19px"
+                                            height="19px" viewBox="0 0 19 19" enable-background="new 0 0 19 19"
+                                            xml:space="preserve">
+                                            <rect width="4" height="4"></rect>
+                                            <rect x="5" width="4" height="4"></rect>
+                                            <rect x="10" width="4" height="4"></rect>
+                                            <rect x="15" width="4" height="4"></rect>
+                                            <rect y="5" width="4" height="4"></rect>
+                                            <rect x="5" y="5" width="4" height="4"></rect>
+                                            <rect x="10" y="5" width="4" height="4"></rect>
+                                            <rect x="15" y="5" width="4" height="4"></rect>
+                                            <rect y="15" width="4" height="4"></rect>
+                                            <rect x="5" y="15" width="4" height="4"></rect>
+                                            <rect x="10" y="15" width="4" height="4"></rect>
+                                            <rect x="15" y="15" width="4" height="4"></rect>
+                                            <rect y="10" width="4" height="4"></rect>
+                                            <rect x="5" y="10" width="4" height="4"></rect>
+                                            <rect x="10" y="10" width="4" height="4"></rect>
+                                            <rect x="15" y="10" width="4" height="4"></rect>
+                                        </svg>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-4"
+                            *ngFor="let product of products">
+                            <div class="card explore-box card-animate border">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="ms-0 flex-grow-1 p-1">
+                                            <a (click)="onProductClick(product.slug)"
+                                                [routerLink]="['/producto', product.slug]">
+                                                <h6 class="mb-0 fs-12 text-white text-bg">Cartuchea y Ahorra</h6>
+                                            </a>
+                                            <p class="mb-0 text-white fs-12"> 4,00 €</p>
+
+                                        </div>
+                                        <div class="bookmark-icon">
+                                            <button type="button" class="btn btn-icon active " data-bs-toggle="button"
+                                                aria-pressed="true"><i
+                                                    class="mdi mdi-cards-heart fs-16  p-1"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="explore-place-bid-img overflow-hidden rounded">
+                                        <img [src]="serverport + product.images[0]" alt="" class="explore-img w-100">
+                                        <!-- <div class="bg-overlay"></div> -->
+
+                                        <div class="place-bid-btn outer-container">
+                                            <!-- <a href="#!" class="btn btn-success"><i class="ri-shopping-cart-2-line align-bottom me-1"></i></a> -->
+                                            <div class="content-1">
+                                                <a href="#!" class="btn btn-success">Add To Cart</a>
+
+                                            </div>
+
+                                            <!-- Second content (Cart icon) -->
+                                            <div class="content-2">
+
+                                                <a (click)="addToCart(product)" class="btn btn-success"
+                                                    data-bs-toggle="offcanvas" data-bs-target="#cartoffcanvas">
+                                                    <i class="ri-shopping-cart-2-line align-bottom me-1"></i>
+                                                    <i class="ri-thumb-up-fill" *ngIf="addedStatus"></i>
+                                                    <span *ngIf="duplicateEntryStatus">Already Added this
+                                                        Product!</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="d-flex align-items-center">
+                                            <div class="flex-grow-1">
+                                                <div class="fs-16 align-middle text-warning">
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-half-fill"></i>
+                                                </div>
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <h5 class="mb-0 text-green"><i class="mdi mdi-ethereum"></i> {{
+                                                    product.price | currency: 'EUR': 'symbol-narrow':'1.2-2':'es' }}
+                                                </h5>
+                                            </div>
+                                        </div>
+
+                                        <h6 class="fs-16 mb-0"><a (click)="onProductClick(product.slug)"
+                                                [routerLink]="['producto',product.slug]">{{ product.title | titleFormat
+                                                }}</a></h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row mt-3 pb-5">
+                        <div class="col-12 ">
+                            <div class="d-flex justify-content-center mt-3">
+                                <button class="btn btn-green me-2" (click)="loadPage(currentPage - 1)"
+                                    [disabled]="currentPage === 1">Previous</button>
+                                <span class="align-self-center">Page {{ currentPage }} of {{ totalPages }} | Total
+                                    Products: {{ totalItems }}</span>
+                                <button class="btn btn-green ms-2" (click)="loadPage(currentPage + 1)"
+                                    [disabled]="currentPage === totalPages">Next</button>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
