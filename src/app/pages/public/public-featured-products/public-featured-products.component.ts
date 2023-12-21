@@ -11,7 +11,7 @@ export class PublicFeaturedProductsComponent  implements OnInit{
   currentPage = 1;
   totalPages = 0;
   totalItems = 0;
-  serverport: string='http://localhost:8084';
+  serverport='http://localhost:8084';
 
   constructor(private productService: ProductService) {}
 

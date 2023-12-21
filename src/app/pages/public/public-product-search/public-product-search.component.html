@@ -132,95 +132,112 @@
                         </a>
                     </div>
                     <div class="card-body" *ngIf="categories">
-                        <!-- <ul class="nav flex-column">
-                            <li *ngFor="let category of categories" class="nav-item">
-                              <a *ngIf="category.subCategories && category.subCategories.length > 0" 
-                                 [attr.data-bs-toggle]="category.subCategories ? 'collapse' : ''"
-                                 [attr.href]="'#' + category.id"
-                                 role="button"
-                                 aria-expanded="false"
-                                 [attr.aria-controls]="category.id"
-                                 class="nav-link">
-                                {{ category.name }}
-                              </a>
-                              <div *ngIf="category.subCategories && category.subCategories.length > 0" 
-                                   [attr.id]="category.id"
-                                   class="menu-dropdown collapse">
-                              <app-menu [categories]="category.subCategories"></app-menu> -->
-                        <!-- </div>
-                              <a *ngIf="!category.subCategories || category.subCategories.length === 0" 
-                                 [routerLink]="['/category', category.id]"
-                                 class="nav-link">
-                                {{ category.name }}
-                              </a>
-                            </li>
-                          </ul> -->
+
+                        <!-- Accordion Smooth Open/Close Example -->
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item" *ngFor="let category of categories">
+                                <h2 class="accordion-header" [id]="'flush-headingOne-' + category.id">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        [attr.data-bs-target]="'#flush-collapseOne-' + category.id"
+                                        aria-expanded="false" [attr.aria-controls]="'flush-collapseOne-' + category.id">
+                                        {{category.name}}
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne-{{category.id}}" class="accordion-collapse collapse"
+                                    [attr.aria-labelledby]="'flush-headingOne-' + category.id"
+                                    [attr.data-bs-parent]="'#accordionFlushExample'">
+                                    <div class="accordion-body" *ngIf="category.subCategories">
+                                        <div class="accordion accordion-flush"
+                                            [id]="'accordionFlushExample-' + category.id">
+                                            <div class="accordion-item"
+                                                *ngFor="let category2 of category.subCategories">
+                                                <h2 class="accordion-header" [id]="'flush-headingTwo-' + category2.id">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        [attr.data-bs-target]="'#flush-collapseTwo-' + category2.id"
+                                                        aria-expanded="false"
+                                                        [attr.aria-controls]="'flush-collapseTwo-' + category2.id">
+                                                        {{category2.name}}
+                                                    </button>
+                                                </h2>
+                                                <div id="flush-collapseTwo-{{category2.id}}"
+                                                    class="accordion-collapse collapse"
+                                                    [attr.aria-labelledby]="'flush-headingTwo-' + category2.id"
+                                                    [attr.data-bs-parent]="'#accordionFlushExample-' + category.id">
+                                                   
+												   
+												    <div class="accordion-body" *ngIf="category2.subCategories">
+                                        <div class="accordion accordion-flush"
+                                            [id]="'accordionFlushExample-' + category2.id">
+                                            <div class="accordion-item"
+                                                *ngFor="let category3 of category2.subCategories">
+                                                <h2 class="accordion-header" [id]="'flush-headingTwo-' + category3.id">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse"
+                                                        [attr.data-bs-target]="'#flush-collapseTwo-' + category3.id"
+                                                        aria-expanded="false"
+                                                        [attr.aria-controls]="'flush-collapseTwo-' + category3.id">
+                                                        {{category3.name}}
+                                                    </button>
+                                                </h2>
+                                                <div id="flush-collapseTwo-{{category3.id}}"
+                                                    class="accordion-collapse collapse"
+                                                    [attr.aria-labelledby]="'flush-headingTwo-' + category3.id"
+                                                    [attr.data-bs-parent]="'#accordionFlushExample-' + category2.id">
+                                                    <div class="accordion-body"  *ngIf="category3.subCategories" >
+                                                        <div class="d-grid" *ngFor="let category4 of category3.subCategories">
+                                                            <a class="w-100" href="#">ok ---- {{category4.name}}</a>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+												   
+												   
+												   
+												   
+												   
+												   
+												   
+												   
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
 
-<!-- Accordion Smooth Open/Close Example -->
-<div class="accordion accordion-flush" id="accordionFlushExample">
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button" type="button">
-                How do I set up my profile?
-            </button>
-        </h2>
-        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-            data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">The renewal of your SlickText service happens on the anniversary of your original paid sign up date. Upgrading in the middle of your billing period will not change the billing date. Upgrading does however force an immediate, pro-rated charge to take place on your account.</div>
-        </div>
-    </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingTwo">
-            <button class="accordion-button" type="button">
-                What can I do with my project?
-            </button>
-        </h2>
-        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-            data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">If you had signed up on a free account with Slicktext, then upgraded to a paid plan at a later date, your bill will renew based on the date you had upgraded to a paid plan. All invoices are able to be viewed under your plan options in your SlickText account.</div>
-        </div>
-    </div>
-    <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingThree">
-            <button class="accordion-button" type="button">
-                Where can I go to edit voice settings?
-            </button>
-        </h2>
-        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
-            data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">No, we cannot provide this information. Opting out from a list is an anonymous, private act. This prevents further harassment. Providing this information is considered bad practice, and further communication after they opt out would be considered against compliance.</div>
-        </div>
-    </div>
-</div>
-
-<script>
-    // Use JavaScript/jQuery to handle accordion behavior
-    $(document).ready(function () {
-        $('.accordion-button').click(function () {
-            $(this).closest('.accordion-item').find('.accordion-collapse').collapse('toggle');
-        });
-    });
-</script>
 
 
 
-                        <ul class="navbar-nav" id="navbar-category" *ngIf="categories">
+
+
+
+
+
+
+                        <!-- <ul class="navbar-nav" id="navbar-category" *ngIf="categories">
 
                             <li class="nav-item" *ngFor="let category of categories">
                                 <a class="nav-link menu-link" href="#{{category.id}}" data-bs-toggle="collapse"
                                     role="button" aria-expanded="false"
                                     [attr.aria-controls]="'collapse-' + category.id">
                                     <span data-key="t-question">{{category.name}}</span>
-                                    <i *ngIf="category.subCategories && category.subCategories.length > 0"  class="ri-arrow-down-s-line text-end"></i>
+                                    <i *ngIf="category.subCategories && category.subCategories.length > 0"
+                                        class="ri-arrow-down-s-line text-end"></i>
                                 </a>
 
                                 <div class="menu-dropdown collapse" id="{{category.id}}">
                                     <ul class="nav nav-sm flex-column" *ngIf="category.subCategories">
                                         <li class="nav-item" *ngFor="let category2 of category.subCategories">
                                             <a href="#{{category2.id}}" class="nav-link" data-key="t-add">
-                                                {{category2.name}} 
-                                                <i *ngIf="category2.subCategories && category2.subCategories.length > 0"  class="ri-arrow-down-s-line text-end"></i>
+                                                {{category2.name}}
+                                                <i *ngIf="category2.subCategories && category2.subCategories.length > 0"
+                                                    class="ri-arrow-down-s-line text-end"></i>
                                             </a>
                                             <div class="menu-dropdown collapse" id="{{category2.id}}">
                                                 <ul class="nav nav-sm flex-column" *ngIf="category2.subCategories">
@@ -228,8 +245,9 @@
                                                         *ngFor="let category3 of category2.subCategories">
                                                         <a href="#{{category3.id}}" class="nav-link" data-key="t-add">
 
-                                                            {{category3.name}} 
-                                                            <i *ngIf="category3.subCategories && category3.subCategories.length > 0"  class="ri-arrow-down-s-line text-end"></i>
+                                                            {{category3.name}}
+                                                            <i *ngIf="category3.subCategories && category3.subCategories.length > 0"
+                                                                class="ri-arrow-down-s-line text-end"></i>
                                                         </a>
                                                         <div class="menu-dropdown collapse" id="{{category3.id}}">
                                                             <ul class="nav nav-sm flex-column"
@@ -254,7 +272,7 @@
                             </li>
 
 
-                        </ul>
+                        </ul> -->
 
                     </div>
                 </div>

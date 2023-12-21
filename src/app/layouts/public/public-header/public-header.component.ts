@@ -11,10 +11,10 @@ import { CartServiceService } from 'src/app/services/cart-service.service';
 export class PublicHeaderComponent implements OnInit {
 
   constructor(private cartService: CartServiceService,private router: Router) { }
-  totalItems: number = 0;
+  totalItems = 0;
   public products : any = [];
   public grandTotal !: number;
-  serverport: string = 'http://localhost:8084';
+  serverport = 'http://localhost:8084';
 
   ngOnInit(): void {
     this.cartService.getProducts().subscribe(res => {

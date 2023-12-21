@@ -11,11 +11,11 @@ export class PublicCartComponent implements OnInit {
   public grandTotal!: number;
   public totalAmount!: number;
   public discountAmount !: number;
-  public shippingCharge: number=0;
-  public serverport: string = 'http://localhost:8084';
-  public discount: number = 0;
-  public vatAmount: number = 0;
-  public totalItems: number = 0;
+  public shippingCharge=0;
+  public serverport = 'http://localhost:8084';
+  public discount = 0;
+  public vatAmount = 0;
+  public totalItems = 0;
 
   constructor(private cartService: CartServiceService) { }
 

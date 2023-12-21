@@ -5,19 +5,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent  {
   title = 'eCommerce';
-  loadScript(url : any) {
-    const body = <HTMLDivElement> document.body;
-    const script = document.createElement('script');
-    script.innerHTML = '';
-    script.src = url;
-    script.async = false;
-    script.defer = true;
-    body.appendChild(script);
-  }
+  // loadScript(url : any) {
+  //   const body = <HTMLDivElement> document.body;
+  //   const script = document.createElement('script');
+  //   script.innerHTML = '';
+  //   script.src = url;
+  //   script.async = false;
+  //   script.defer = true;
+  //   body.appendChild(script);
+  // }
 
-  ngOnInit() {
+  // ngOnInit() {
     // this.loadScript('../assets/js/vendor/jquery-1.12.4.min.js');
     // this.loadScript('../assets/js/bootstrap.min.js');
     // this.loadScript('../assets/js/TimeCircles.js');
@@ -28,5 +28,5 @@ export class AppComponent implements OnInit {
     // this.loadScript('../assets/lib/home.js');
     // this.loadScript('../assets/js/plugins.js');
     // this.loadScript('../assets/js/main.js');
-  }
+  //}
 }

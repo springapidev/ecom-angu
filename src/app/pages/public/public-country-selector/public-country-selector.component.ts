@@ -26,8 +26,8 @@ export class PublicCountrySelectorComponent {
   countryAndStates: CountryAndStates = { country: {}, states: {} };
   countries: Country[] = [];
   states: State[] = [];
-  selectedCountry: string = '';
-  selectedState: string = '';
+  selectedCountry = '';
+  selectedState = '';
 
   constructor(private http: HttpClient) {
     this.loadData();

@@ -47,8 +47,8 @@ export class PublicCheckoutComponent implements OnInit {
   countryAndStates: CountryAndStates = { country: {}, states: {} };
   countries: Country[] = [];
   states: State[] = [];
-  selectedCountry: string = '';
-  selectedState: string = '';
+  selectedCountry = '';
+  selectedState = '';
 
 
 
