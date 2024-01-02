@@ -3,3 +3,8 @@
     -o-object-fit: cover;
     object-fit: cover;
 }
+
+.accordion-link{
+    font-size: 12px;
+    padding: 3px 5px 5px 15px;
+}

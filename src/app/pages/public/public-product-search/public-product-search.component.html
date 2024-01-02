@@ -137,11 +137,12 @@
                         <div class="accordion accordion-flush" id="accordionFlushExample">
                             <div class="accordion-item" *ngFor="let category of categories">
                                 <h2 class="accordion-header" [id]="'flush-headingOne-' + category.id">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    <button *ngIf="category.subCategories.length > 0" class="accordion-button" type="button" data-bs-toggle="collapse"
                                         [attr.data-bs-target]="'#flush-collapseOne-' + category.id"
                                         aria-expanded="false" [attr.aria-controls]="'flush-collapseOne-' + category.id">
                                         {{category.name}}
                                     </button>
+                                    <a class="accordion-link" *ngIf="category.subCategories.length == 0" href="#">{{category.name}}</a>
                                 </h2>
                                 <div id="flush-collapseOne-{{category.id}}" class="accordion-collapse collapse"
                                     [attr.aria-labelledby]="'flush-headingOne-' + category.id"
@@ -152,13 +153,14 @@
                                             <div class="accordion-item"
                                                 *ngFor="let category2 of category.subCategories">
                                                 <h2 class="accordion-header" [id]="'flush-headingTwo-' + category2.id">
-                                                    <button class="accordion-button" type="button"
+                                                    <button *ngIf="category2.subCategories.length > 0" class="accordion-button" type="button"
                                                         data-bs-toggle="collapse"
                                                         [attr.data-bs-target]="'#flush-collapseTwo-' + category2.id"
                                                         aria-expanded="false"
                                                         [attr.aria-controls]="'flush-collapseTwo-' + category2.id">
                                                         {{category2.name}}
                                                     </button>
+                                                    <a class="accordion-link" *ngIf="category2.subCategories.length == 0" href="#">{{category2.name}}</a>
                                                 </h2>
                                                 <div id="flush-collapseTwo-{{category2.id}}"
                                                     class="accordion-collapse collapse"
@@ -172,13 +174,14 @@
                                             <div class="accordion-item"
                                                 *ngFor="let category3 of category2.subCategories">
                                                 <h2 class="accordion-header" [id]="'flush-headingTwo-' + category3.id">
-                                                    <button class="accordion-button" type="button"
+                                                    <button *ngIf="category3.subCategories.length > 0" class="accordion-button" type="button"
                                                         data-bs-toggle="collapse"
                                                         [attr.data-bs-target]="'#flush-collapseTwo-' + category3.id"
                                                         aria-expanded="false"
                                                         [attr.aria-controls]="'flush-collapseTwo-' + category3.id">
                                                         {{category3.name}}
                                                     </button>
+                                                    <a class="accordion-link" *ngIf="category3.subCategories.length == 0" href="#">{{category3.name}}</a>
                                                 </h2>
                                                 <div id="flush-collapseTwo-{{category3.id}}"
                                                     class="accordion-collapse collapse"
@@ -186,7 +189,7 @@
                                                     [attr.data-bs-parent]="'#accordionFlushExample-' + category2.id">
                                                     <div class="accordion-body"  *ngIf="category3.subCategories" >
                                                         <div class="d-grid" *ngFor="let category4 of category3.subCategories">
-                                                            <a class="w-100" href="#">ok ---- {{category4.name}}</a>
+                                                            <a class="accordion-link" href="#">{{category4.name}}</a>
                                                         </div>
                                                         
                                                     </div>
